@@ -3,15 +3,14 @@ import profileAvatar from "../assets/profile-avatar.png";
 
 export const Home = () => {
   return (
-    <div className="home-page">
+    <div>
       <StyledHomeSectionOne>
         <StyledHomeBlurb>
           <h2>
             Hiya!
             <br />
             I'm Sehun.
-            <br />
-            Front-End Developer.
+            <br />A Front-End Developer.
           </h2>
           <p>Learned via The Odin Project.</p>
         </StyledHomeBlurb>
