@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { ProjectCard } from "../components/ProjectCard";
-import BattleShipGIF from "../assets/battleship.gif";
+import BattleShipGIF from "../assets/works/battleship.gif";
+import ShoppingCartGIF from "../assets/works/shoppingcart.gif";
+import TaskPlannerGIF from "../assets/works/taskplanner.gif";
+import PokemonMemoryCardPNG from "../assets/works/pokemonmemorycard.png";
+import EtchASketchGIF from "../assets/works/etchsketch.gif";
+import TicTacToeGIF from "../assets/works/tictactoe.gif";
 
 export const Works = () => {
   const projects = [
@@ -13,7 +18,7 @@ export const Works = () => {
       demo: "https://sehundpark.github.io/battleship/",
     },
     {
-      image: "",
+      image: ShoppingCartGIF,
       title: "Shopping Cart",
       description:
         "This project is a React-based shopping cart application that allows users to browse products, add them to a cart, and manage their shopping experience.",
@@ -21,7 +26,7 @@ export const Works = () => {
       demo: "https://sehunshoppingcart.netlify.app/",
     },
     {
-      image: "",
+      image: TaskPlannerGIF,
       title: "Task Planner",
       description:
         "A comprehensive task management application built with JavaScript, allowing users to organize tasks into categories and projects.",
@@ -29,7 +34,7 @@ export const Works = () => {
       demo: "https://sehundpark.github.io/todo-list/",
     },
     {
-      image: "",
+      image: PokemonMemoryCardPNG,
       title: "Pokemon Memory Game",
       description:
         "This project is a fun and interactive memory game featuring Pokemon characters. Players click on Pokemon cards to earn points, but must remember which ones they've clicked to avoid repeating and losing the game.",
@@ -37,7 +42,7 @@ export const Works = () => {
       demo: "https://pokemon-memory-game-sehundpark.netlify.app/",
     },
     {
-      image: "",
+      image: EtchASketchGIF,
       title: "Etch-A-Sketch",
       description:
         "An interactive web-based Etch-A-Sketch application that allows users to create colorful pixel art by hovering over a grid. This project is built using HTML, CSS, and JavaScript.",
@@ -45,7 +50,7 @@ export const Works = () => {
       demo: "https://sehundpark.github.io/etch-a-sketch/",
     },
     {
-      image: "",
+      image: TicTacToeGIF,
       title: "Tic-Tac-Toe",
       description:
         "A classic Tic-Tac-Toe game implemented with HTML, CSS, and JavaScript. This project features a clean user interface, customizable player names and symbols, and a responsive design.",
