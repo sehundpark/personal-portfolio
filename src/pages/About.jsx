@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Resume } from "./subpages/Education/Resume";
 import { HobbiesActing } from "./subpages/Hobbies/HobbiesActing";
 import { HobbiesPhotography } from "./subpages/Hobbies/HobbiesPhotography";
 import { HobbiesGaming } from "./subpages/Hobbies/HobbiesGaming";
@@ -15,80 +16,37 @@ export const About = () => {
   return (
     <StyledAboutPage>
       <h2>About Me</h2>
-      <Studies>
-        <h3>Education</h3>
-        <h4>Degree</h4>
-        <p>
-          University of California, Davis
-          <br />
-          Bachelor of Arts in Theatre and Dance
-          <br />
-          2017-2021
-        </p>
-        <h4>Computer Science Related Courses:</h4>
-        <p>
-          ECS 010: Intro to Programming
-          <br />
-          Course Description: Computers and computer programming for students
-          with some prior experience, algorithm design, and debugging. Good
-          programming style. Use of basic UNIX tools.
-        </p>
-        <p>
-          ECS 030: Software Development & Object-Oriented Programming in C++
-          <br />
-          Course Description: Object-oriented programming in C++. Basic data
-          structures and their use. Writing good programs of increased
-          complexity and efficiency. Methods for debugging and verification.
-        </p>
-        <p>
-          ECS 020: Discrete Math for Computer Science
-          <br />
-          Course Description: Discrete mathematics of particular utility to
-          computer science. Proofs by induction. Propositional and first-order
-          logic. Sets, functions, and relations. Big-O and related notations.
-          Recursion and solutions of recurrence relations. Combinatorics.
-          Probability on finite probability spaces. Graph theory.
-        </p>
-        <p>
-          ECS 040: Data Structures, Algorithms, & Programming
-          <br />
-          Course Description: Design and analysis of data structures for a
-          variety of applications; trees, heaps, searching, sorting, hashing,
-          and graphs. Extensive programming.
-        </p>
-        <h4>Applicable Math Courses:</h4>
-        <p>
-          MAT 21A: Calculus
-          <br />
-          Course Description: Functions, limits, continuity. Slope and
-          derivative. Differentiation of algebraic and transcendental functions.
-          Applications to motion, natural growth, graphing, extrema of a
-          function. Differentials. L'Hopital's rule.
-        </p>
-        <p>
-          MAT 21B: Calculus
-          <br />
-          Course Description: Continuation of MAT 021A. Definition of definite
-          integral, fundamental theorem of calculus, techniques of integration.
-          Application to area, volume, arc length, average of a function,
-          improper integral, surface of revolution.
-        </p>
-        <p>
-          MAT 21C: Calculus
-          <br />
-          Course Description: Continuation of MAT 021B. Sequences, series, tests
-          for convergence, Taylor expansions. Vector algebra, vector calculus,
-          scalar and vector fields. Partial derivatives, total differentials.
-          Applications to maximum and minimum problems in two or more variables.
-          Applications to physical systems.
-        </p>
-        <p>
-          MAT 22A: Linear Algebra
-          <br />
-          Course Description: Matrices and linear transformations, determinants,
-          eigenvalues, eigenvectors, diagonalization, factorization.
-        </p>
-      </Studies>
+      <p>
+        Hello! My name is Sehun. I'm currently searching for work as a Junior
+        Front-End Developer. I began to learn about web development with The
+        Odin Project. I was previously working in marketing, but realized that
+        my future prospects were simply not enough to sustain myself or my
+        desire to one day have a family of my own. I retraced my life back to
+        the very beginning to try and rediscover a potential career that could
+        provide me with a stable financial career whilst being something
+        enjoyable and attuned to my skillset. I was taken back to my memory of a
+        game called Minecraft. It was early in my Junior High school years and I
+        wanted to create an online community for my friends and I. Thus, I
+        created DarkCrest MC Servers. It was, in a way, my first glimpse into
+        the world of computer science and programming. I was running a Minecraft
+        server on Linux and had to learn to navigate via command line. I was
+        doing file transfers via FTP. I had learnt and setup MySQL databases to
+        store world mapping data. I dabbled a little bit in Java to create
+        simple plugins (mods) for the server. I had a lot of fun doing this and
+        actually entered my first year of college with a major in Computer
+        Science and Engineering. However, things didn't quite pan out that first
+        year with due to a series of unfortunate events. I switched majors and
+        pursued something else and had a lot of fun doing it. Half a decade
+        later, I found myself coming back to learning how to code. Financial
+        situations did not allow me to return the conventional route and so I
+        sought out free opportunities and presevered through self-learning and
+        growth. I'm happy to say that I finally feel that I am ready to break
+        into this new field and venture towards this new journey in my life. My
+        mission is to continue learning and growing in this world where
+        creativity and tech intermingles, both seemingly opposite ends but
+        somehow intertwined like myself.
+      </p>
+      <Resume />
       <Hobbies>
         <h3>My Hobbies</h3>
         <HobbiesGrid>
@@ -107,10 +65,6 @@ const StyledAboutPage = styled.div`
   padding: 2rem;
   text-align: center;
   box-sizing: border-box;
-`;
-
-const Studies = styled.div`
-  margin-bottom: 2rem;
 `;
 
 const Hobbies = styled.div``;

@@ -12,7 +12,7 @@ export const Home = () => {
             I'm Sehun.
             <br />A Front-End Developer.
           </StyledHeading>
-          <StyledSubheading>Learned via The Odin Project.</StyledSubheading>
+          <StyledSubheading>Self-taught via The Odin Project.</StyledSubheading>
         </StyledHomeBlurb>
         <StyledProfileImgContainer>
           <StyledProfileImg src={profileAvatar} alt="image avatar of Sehun" />

@@ -27,6 +27,7 @@ import photographyimage26 from "../../assets/hobbies/photography/DSC04057.jpg";
 import photographyimage27 from "../../assets/hobbies/photography/DSC04444.jpg";
 import photographyimage28 from "../../assets/hobbies/photography/DSC04446.jpg";
 // import photographyimage29 from "../../assets/hobbies/photography/DSC04524.jpg";
+import photographyimage30 from "../../assets/hobbies/photography/DSC00089.JPG";
 
 export const images = [
   photographyimage1,
@@ -58,4 +59,5 @@ export const images = [
   photographyimage27,
   photographyimage28,
   // photographyimage29,
+  photographyimage30,
 ];
