@@ -1,23 +1,29 @@
 import styled from "styled-components";
 import { ImageSlider } from "../../components/ImageSlider";
 import { images } from "../../components/ImageImportBundles/HobbiesGamingImagesImport.jsx";
+import { HobbyCard } from "../../components/HobbyCard";
 
 export const HobbiesGaming = () => {
-  return (
-    <StyledGaming>
+  const content = (
+    <>
       <StyledGamingHeader>Gaming</StyledGamingHeader>
-      <StyledGamingParagraph>Gaming blah blah</StyledGamingParagraph>
-      <ImageSlider images={images} />
-    </StyledGaming>
+      <StyledGamingParagraph>
+        Gaming is a form of escape into a world that is anything other than this
+        current one. It allows for self-expression and the ability to view
+        worlds through different eyes. I began Gaming in my sophmore year of
+        high school with the Southwest Academy of Visual and Performing Arts and
+        continued through to the end of college.
+      </StyledGamingParagraph>
+    </>
+  );
+
+  return (
+    <HobbyCard
+      content={content}
+      imageSlider={<ImageSlider images={images} />}
+    />
   );
 };
-
-const StyledGaming = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: #c5995e;
-`;
 
 const StyledGamingHeader = styled.h4`
   margin: 0;

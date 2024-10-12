@@ -1,25 +1,29 @@
 import styled from "styled-components";
 import { ImageSlider } from "../../components/ImageSlider";
 import { images } from "../../components/ImageImportBundles/HobbiesPhotographyImagesImport.jsx";
+import { HobbyCard } from "../../components/HobbyCard";
 
 export const HobbiesPhotography = () => {
-  return (
-    <StyledPhotography>
+  const content = (
+    <>
       <StyledPhotographyHeader>Photography</StyledPhotographyHeader>
       <StyledPhotographyParagraph>
-        Photography blah blah
+        Photography is a form of escape into a world that is anything other than
+        this current one. It allows for self-expression and the ability to view
+        worlds through different eyes. I began Photography in my sophmore year
+        of high school with the Southwest Academy of Visual and Performing Arts
+        and continued through to the end of college.
       </StyledPhotographyParagraph>
-      <ImageSlider images={images} />
-    </StyledPhotography>
+    </>
+  );
+
+  return (
+    <HobbyCard
+      content={content}
+      imageSlider={<ImageSlider images={images} />}
+    />
   );
 };
-
-const StyledPhotography = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: #c5995e;
-`;
 
 const StyledPhotographyHeader = styled.h4`
   margin: 0;

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { ImageSlider } from "../../components/ImageSlider";
 import { images } from "../../components/ImageImportBundles/HobbiesActingImagesImport.jsx";
+import { HobbyCard } from "../../components/HobbyCard";
 
 export const HobbiesActing = () => {
-  return (
-    <StyledActing>
+  const content = (
+    <>
       <StyledActingHeader>Acting</StyledActingHeader>
       <StyledActingParagraph>
         Acting is a form of escape into a world that is anything other than this
@@ -13,17 +14,16 @@ export const HobbiesActing = () => {
         high school with the Southwest Academy of Visual and Performing Arts and
         continued through to the end of college.
       </StyledActingParagraph>
-      <ImageSlider images={images} />
-    </StyledActing>
+    </>
+  );
+
+  return (
+    <HobbyCard
+      content={content}
+      imageSlider={<ImageSlider images={images} />}
+    />
   );
 };
-
-const StyledActing = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: tan;
-`;
 
 const StyledActingHeader = styled.h4`
   margin: 0;

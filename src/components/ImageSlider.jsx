@@ -32,43 +32,63 @@ export const ImageSlider = ({ images }) => {
           Next
         </StyledSlideshowNavigationButton>
       </StyledButtonContainer>
-      <div>
+      <StyledDotContainer>
         {images.map((_, index) => (
-          <span key={index}>{index === currentIndex ? "● " : "○ "}</span>
+          <StyledDot key={index} active={index === currentIndex} />
         ))}
-      </div>
+      </StyledDotContainer>
     </StyledSlideshowContainer>
   );
 };
 
-const StyledImg = styled.img`
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
+const StyledSlideshowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 const StyledImgContainer = styled.div`
+  width: 100%;
+  height: 100px;
   display: flex;
-  max-width: 100%;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 `;
 
-const StyledSlideshowContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const StyledImg = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 `;
 
 const StyledButtonContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
+  margin-top: 5px;
 `;
 
 const StyledSlideshowNavigationButton = styled.button`
   background-color: white;
-  border: 2px solid black;
-  margin: 10px;
+  border: 1px solid black;
+  padding: 2px 5px;
+  font-size: 12px;
+`;
+
+const StyledDotContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+`;
+
+const StyledDot = styled.span`
+  height: 8px;
+  width: 8px;
+  background-color: ${(props) => (props.active ? "black" : "gray")};
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
 `;
