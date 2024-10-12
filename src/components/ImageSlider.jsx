@@ -24,19 +24,21 @@ export const ImageSlider = ({ images }) => {
           alt={`Slide ${currentIndex + 1}`}
         />
       </StyledImgContainer>
-      <StyledButtonContainer>
-        <StyledSlideshowNavigationButton onClick={goToPrevious}>
-          Previous
-        </StyledSlideshowNavigationButton>
-        <StyledSlideshowNavigationButton onClick={goToNext}>
-          Next
-        </StyledSlideshowNavigationButton>
-      </StyledButtonContainer>
-      <StyledDotContainer>
-        {images.map((_, index) => (
-          <StyledDot key={index} active={index === currentIndex} />
-        ))}
-      </StyledDotContainer>
+      <StyledControlsContainer>
+        <StyledButtonContainer>
+          <StyledSlideshowNavigationButton onClick={goToPrevious}>
+            Previous
+          </StyledSlideshowNavigationButton>
+          <StyledSlideshowNavigationButton onClick={goToNext}>
+            Next
+          </StyledSlideshowNavigationButton>
+        </StyledButtonContainer>
+        <StyledDotContainer>
+          {images.map((_, index) => (
+            <StyledDot key={index} active={index === currentIndex} />
+          ))}
+        </StyledDotContainer>
+      </StyledControlsContainer>
     </StyledSlideshowContainer>
   );
 };
@@ -51,7 +53,7 @@ const StyledSlideshowContainer = styled.div`
 
 const StyledImgContainer = styled.div`
   width: 100%;
-  height: 100px;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,11 +66,20 @@ const StyledImg = styled.img`
   object-fit: contain;
 `;
 
+const StyledControlsContainer = styled.div`
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 
 const StyledSlideshowNavigationButton = styled.button`
@@ -81,7 +92,6 @@ const StyledSlideshowNavigationButton = styled.button`
 const StyledDotContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 5px;
 `;
 
 const StyledDot = styled.span`

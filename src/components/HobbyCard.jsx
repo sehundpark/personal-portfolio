@@ -4,9 +4,7 @@ export const HobbyCard = ({ content, imageSlider }) => {
   return (
     <StyledCard>
       <ContentWrapper>{content}</ContentWrapper>
-      <ImageSliderWrapper>
-        {imageSlider || <p>Image Slider Placeholder</p>}
-      </ImageSliderWrapper>
+      <ImageSliderWrapper>{imageSlider}</ImageSliderWrapper>
     </StyledCard>
   );
 };
@@ -15,8 +13,8 @@ const StyledCard = styled.div`
   border: 2px solid #000;
   border-radius: 8px;
   padding: 16px;
-  width: 300px;
-  height: 400px;
+  width: 450px;
+  height: 625px;
   display: flex;
   flex-direction: column;
 `;
@@ -28,7 +26,7 @@ const ContentWrapper = styled.div`
 `;
 
 const ImageSliderWrapper = styled.div`
-  height: 150px;
+  height: 380px;
   background-color: #f0f0f0;
   display: flex;
   align-items: center;
