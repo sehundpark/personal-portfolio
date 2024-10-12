@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
-export const ProjectCard = ({ image, title, description, link, demo }) => {
+export const ProjectCard = ({
+  image,
+  title,
+  description,
+  link,
+  demo,
+  isHomepage,
+}) => {
   return (
-    <StyledCard>
+    <StyledCard isHomepage={isHomepage}>
       <ContentWrapper>
         <StyledCardTitle>{title}</StyledCardTitle>
         <StyledCardDescription>{description}</StyledCardDescription>
@@ -11,15 +18,21 @@ export const ProjectCard = ({ image, title, description, link, demo }) => {
         <StyledImage src={image} alt={title} />
       </ImageWrapper>
       <StyledButtonContainer>
-        <StyledButton>
-          <StyledLink href={link} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </StyledLink>
+        <StyledButton
+          as="a"
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
         </StyledButton>
-        <StyledButton>
-          <StyledLink href={demo} target="_blank" rel="noopener noreferrer">
-            Demo
-          </StyledLink>
+        <StyledButton
+          as="a"
+          href={demo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Demo
         </StyledButton>
       </StyledButtonContainer>
     </StyledCard>
@@ -27,22 +40,44 @@ export const ProjectCard = ({ image, title, description, link, demo }) => {
 };
 
 const StyledCard = styled.div`
-  border: 2px solid #000;
-  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
   padding: 16px;
   width: 100%;
   max-width: 550px;
-  aspect-ratio: 7 / 8;
+  aspect-ratio: ${(props) => (props.isHomepage ? "auto" : "7 / 8")};
+  height: ${(props) => (props.isHomepage ? "600px" : "auto")};
   display: flex;
   flex-direction: column;
   text-align: center;
   box-sizing: border-box;
+  background-color: var(--card-background);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
 const ContentWrapper = styled.div`
   flex: 1;
   overflow-y: auto;
   margin-bottom: 16px;
+  padding-right: 8px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -52,6 +87,7 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 8px;
 `;
 
 const StyledCardTitle = styled.h3`
@@ -76,13 +112,16 @@ const StyledButtonContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
-  background-color: white;
-  border: 2px solid black;
-  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
   cursor: pointer;
-`;
-
-const StyledLink = styled.a`
+  transition: background-color 0.3s ease;
   text-decoration: none;
-  color: inherit;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
 `;

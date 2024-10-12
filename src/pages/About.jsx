@@ -16,7 +16,7 @@ export const About = () => {
   return (
     <StyledAboutPage>
       <h2>About Me</h2>
-      <p>
+      <StyledAboutMeParagraph>
         Hello! My name is Sehun. I'm currently searching for work as a Junior
         Front-End Developer. I began to learn about web development with The
         Odin Project. I was previously working in marketing, but realized that
@@ -45,7 +45,7 @@ export const About = () => {
         mission is to continue learning and growing in this world where
         creativity and tech intermingles, both seemingly opposite ends but
         somehow intertwined like myself.
-      </p>
+      </StyledAboutMeParagraph>
       <Resume />
       <Hobbies>
         <h3>My Hobbies</h3>
@@ -67,7 +67,18 @@ const StyledAboutPage = styled.div`
   box-sizing: border-box;
 `;
 
-const Hobbies = styled.div``;
+const StyledAboutMeParagraph = styled.p`
+  padding-bottom: 50px;
+  border-bottom: 2px solid black;
+  margin-bottom: 50px;
+  text-align: center;
+`;
+
+const Hobbies = styled.div`
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid black;
+`;
 
 const HobbiesGrid = styled.div`
   display: grid;

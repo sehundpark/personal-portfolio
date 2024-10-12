@@ -23,25 +23,23 @@ export const Navbar = () => {
 
 const StyledNavbarContainer = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
+  background-color: var(--card-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 `;
 
 const StyledNavbar = styled.nav`
-  width: 100%;
   max-width: 1200px;
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 0.5rem;
+  margin: 0 auto;
+  padding: 1rem;
 `;
 
 const StyledNavbarUL = styled.ul`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -58,15 +56,14 @@ const StyledNavbarLI = styled.li`
 
 const StyledLink = styled(Link)`
   padding: 0.5rem 1rem;
-  border: 2px solid #000;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #000;
+  color: var(--secondary-color);
   font-weight: bold;
   transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 
-  &:hover {
-    background-color: #000;
-    color: #fff;
+  &:hover,
+  &.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
   }
 `;

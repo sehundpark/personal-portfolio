@@ -1,10 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --card-background: #ffffff;
+
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,18 +21,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }
-a:hover {
-  color: #535bf2;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-top: 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
 }
 
 button {
@@ -33,13 +69,16 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--primary-color);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: var(--secondary-color);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

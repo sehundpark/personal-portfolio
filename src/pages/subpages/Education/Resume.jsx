@@ -51,7 +51,7 @@ const skillsData = [
 
 const coursesData = [
   {
-    type: "Computer Science Courses",
+    type: "Computer Science",
     courses: [
       {
         name: "ECS 010: Intro to Programming",
@@ -76,7 +76,7 @@ const coursesData = [
     ],
   },
   {
-    type: "Math Courses",
+    type: "Math",
     courses: [
       {
         name: "MAT 21A: Calculus",

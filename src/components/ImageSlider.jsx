@@ -27,10 +27,10 @@ export const ImageSlider = ({ images }) => {
       <StyledControlsContainer>
         <StyledButtonContainer>
           <StyledSlideshowNavigationButton onClick={goToPrevious}>
-            Previous
+            &lt;
           </StyledSlideshowNavigationButton>
           <StyledSlideshowNavigationButton onClick={goToNext}>
-            Next
+            &gt;
           </StyledSlideshowNavigationButton>
         </StyledButtonContainer>
         <StyledDotContainer>
@@ -78,15 +78,27 @@ const StyledControlsContainer = styled.div`
 const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 5px;
+  gap: 20px;
+  margin-bottom: 10px;
 `;
 
 const StyledSlideshowNavigationButton = styled.button`
-  background-color: white;
-  border: 1px solid black;
-  padding: 2px 5px;
-  font-size: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
 `;
 
 const StyledDotContainer = styled.div`
@@ -97,8 +109,10 @@ const StyledDotContainer = styled.div`
 const StyledDot = styled.span`
   height: 8px;
   width: 8px;
-  background-color: ${(props) => (props.active ? "black" : "gray")};
+  background-color: ${(props) =>
+    props.active ? "var(--primary-color)" : "var(--secondary-color)"};
   border-radius: 50%;
   display: inline-block;
-  margin: 0 2px;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
 `;
