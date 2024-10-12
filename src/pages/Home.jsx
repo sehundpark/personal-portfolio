@@ -11,9 +11,17 @@ export const Home = () => {
     "HTML",
     "CSS",
     "Git",
+    "Responsive Design",
     "Adobe Lightroom",
     "Adobe Photoshop",
   ];
+
+  const scrollToFooter = () => {
+    const footer = document.querySelector("footer");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <StyledHomeContainer>
@@ -46,11 +54,9 @@ export const Home = () => {
         <p>
           I'm always open to new opportunities and collaborations. Whether you
           have a project in mind or just want to chat about web development,
-          feel free to reach out!
+          feel free to reach out! Information in footer below.
         </p>
-        <StyledButton as="a" href="/contact">
-          Contact Me
-        </StyledButton>
+        {/* <StyledButton onClick={scrollToFooter}>Contact Me</StyledButton> */}
       </StyledSection>
     </StyledHomeContainer>
   );
