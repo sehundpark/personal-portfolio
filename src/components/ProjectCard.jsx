@@ -9,7 +9,7 @@ export const ProjectCard = ({
   isHomepage,
 }) => {
   return (
-    <StyledCard isHomepage={isHomepage}>
+    <StyledCard $isHomepage={isHomepage}>
       <ContentWrapper>
         <StyledCardTitle>{title}</StyledCardTitle>
         <StyledCardDescription>{description}</StyledCardDescription>
@@ -45,18 +45,20 @@ const StyledCard = styled.div`
   padding: 16px;
   width: 100%;
   max-width: 550px;
-  aspect-ratio: ${(props) => (props.isHomepage ? "auto" : "7 / 8")};
-  height: ${(props) => (props.isHomepage ? "600px" : "auto")};
+  aspect-ratio: ${(props) => (props.$isHomepage ? "auto" : "7 / 8")};
+  height: ${(props) => (props.$isHomepage ? "600px" : "auto")};
   display: flex;
   flex-direction: column;
   text-align: center;
   box-sizing: border-box;
   background-color: var(--card-background);
+  color: var(--text-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 `;
 

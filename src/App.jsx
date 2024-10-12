@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
 import { Works } from "./pages/Works";
 import { About } from "./pages/About";
+import { ThemeProvider } from "./components/ThemeContext";
 import "./App.css";
 
 const AppContent = () => {
@@ -22,9 +23,11 @@ const AppContent = () => {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 

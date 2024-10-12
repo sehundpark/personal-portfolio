@@ -13,17 +13,24 @@ export const AnimatedIntro = () => {
       typeSpeed: 30,
       backSpeed: 0,
       showCursor: false,
-      onComplete: (self) => {
+    };
+
+    const removeCursor = (self) => {
+      if (self && self.cursor) {
         self.cursor.remove();
-      },
+      }
+    };
+
+    const startNextTyped = (nextTyped) => {
+      setTimeout(() => nextTyped.start(), 500); // 500ms delay between animations
     };
 
     const typed1 = new Typed(el1.current, {
       ...options,
       strings: ["Hi, my name's Sehun!"],
       onComplete: (self) => {
-        self.cursor.remove();
-        typed2.start();
+        removeCursor(self);
+        startNextTyped(typed2);
       },
     });
 
@@ -31,8 +38,8 @@ export const AnimatedIntro = () => {
       ...options,
       strings: ["I'm a Front-End Developer."],
       onComplete: (self) => {
-        self.cursor.remove();
-        typed3.start();
+        removeCursor(self);
+        startNextTyped(typed3);
       },
     });
 
@@ -40,14 +47,17 @@ export const AnimatedIntro = () => {
       ...options,
       strings: ["Self-taught via The Odin Project."],
       onComplete: (self) => {
-        self.cursor.remove();
-        typed4.start();
+        removeCursor(self);
+        startNextTyped(typed4);
       },
     });
 
     const typed4 = new Typed(el4.current, {
       ...options,
       strings: ["Check out my works!"],
+      onComplete: (self) => {
+        removeCursor(self);
+      },
     });
 
     return () => {

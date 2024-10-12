@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { ThemeContext } from "./ThemeContext";
 
 export const Navbar = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <StyledNavbarContainer>
       <StyledNavbar>
-        <StyledNavbarUL>
+        <NavLinks>
           <StyledNavbarLI>
             <StyledLink to="/">Home</StyledLink>
           </StyledNavbarLI>
@@ -15,7 +19,10 @@ export const Navbar = () => {
           <StyledNavbarLI>
             <StyledLink to="/about">About</StyledLink>
           </StyledNavbarLI>
-        </StyledNavbarUL>
+        </NavLinks>
+        <ThemeToggle onClick={toggleTheme}>
+          {theme === "light" ? <MoonIcon /> : <SunIcon />}
+        </ThemeToggle>
       </StyledNavbar>
     </StyledNavbarContainer>
   );
@@ -23,31 +30,27 @@ export const Navbar = () => {
 
 const StyledNavbarContainer = styled.div`
   width: 100%;
-  background-color: var(--card-background);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--navbar-bg);
 `;
 
 const StyledNavbar = styled.nav`
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-const StyledNavbarUL = styled.ul`
+const NavLinks = styled.ul`
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0;
   margin: 0;
   list-style-type: none;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 const StyledNavbarLI = styled.li`
@@ -56,14 +59,69 @@ const StyledNavbarLI = styled.li`
 
 const StyledLink = styled(Link)`
   padding: 0.5rem 1rem;
-  color: var(--secondary-color);
+  text-decoration: none;
+  color: var(--text-color);
   font-weight: bold;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease;
 
-  &:hover,
-  &.active {
+  &:hover {
     color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
   }
 `;
+
+const ThemeToggle = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--hover-bg);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`;
+
+const SunIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+);
+
+const MoonIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+);

@@ -18,7 +18,7 @@ export const projectsData = [
     image: ShoppingCartGIF,
     title: "Shopping Cart",
     description:
-      "This project is a React-based shopping cart application that allows users to browse products, add them to a cart, and manage their shopping experience.",
+      "React-based shopping cart app where users can browse products, add items to the cart, and manage their shopping.",
     link: "https://github.com/sehundpark/shopping-cart",
     demo: "https://sehunshoppingcart.netlify.app/",
   },
@@ -26,7 +26,7 @@ export const projectsData = [
     image: TaskPlannerGIF,
     title: "Task Planner",
     description:
-      "A comprehensive task management application built with JavaScript, allowing users to organize tasks into categories and projects.",
+      "Comprehensive task management application built with JavaScript, allowing users to organize tasks into categories and projects.",
     link: "https://github.com/sehundpark/todo-list",
     demo: "https://sehundpark.github.io/todo-list/",
   },

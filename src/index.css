@@ -7,6 +7,8 @@
   --background-color: #f9f9f9;
   --text-color: #333333;
   --card-background: #ffffff;
+  --navbar-bg: #ffffff;
+  --hover-bg: #e9ecef;
 
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
@@ -21,10 +23,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme="dark"] {
+  --primary-color: #3498db;
+  --secondary-color: #34495e;
+  --accent-color: #e74c3c;
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-background: #2c3e50;
+  --navbar-bg: #2c3e50;
+  --hover-bg: #34495e;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -36,6 +50,7 @@ h6 {
   font-weight: 700;
   color: var(--secondary-color);
   margin-top: 0;
+  transition: color 0.3s ease;
 }
 
 h1 {
@@ -72,7 +87,7 @@ button {
   background-color: var(--primary-color);
   color: white;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 button:hover {
@@ -82,4 +97,30 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Additional styles for better theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card,
+.container,
+.section {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+}
+
+::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
 }

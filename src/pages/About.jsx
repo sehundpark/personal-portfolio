@@ -7,8 +7,8 @@ import { HobbiesGaming } from "./subpages/Hobbies/HobbiesGaming";
 import { HobbiesSports } from "./subpages/Hobbies/HobbiesSports";
 
 const hobbies = [
-  { name: "Acting", Component: HobbiesActing },
   { name: "Photography", Component: HobbiesPhotography },
+  { name: "Acting", Component: HobbiesActing },
   { name: "Gaming", Component: HobbiesGaming },
   { name: "Sports", Component: HobbiesSports },
 ];

@@ -9,7 +9,7 @@ export const ProjectShowcase = ({ limit = 3, useHomepageStyle = false }) => {
   return (
     <ShowcaseContainer>
       <h2>Featured Projects</h2>
-      <ProjectGrid useHomepageStyle={useHomepageStyle}>
+      <ProjectGrid $useHomepageStyle={useHomepageStyle}>
         {featuredProjects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -34,7 +34,7 @@ const ShowcaseContainer = styled.section`
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 0.5rem;
+  gap: 2rem;
   justify-content: center;
 
   @media (min-width: 1200px) {
@@ -42,7 +42,7 @@ const ProjectGrid = styled.div`
   }
 
   ${(props) =>
-    props.useHomepageStyle &&
+    props.$useHomepageStyle &&
     `
       @media (min-width: 768px) {
         grid-template-columns: repeat(3, 1fr);
