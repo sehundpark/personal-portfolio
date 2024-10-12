@@ -53,7 +53,7 @@ const StyledSlideshowContainer = styled.div`
 
 const StyledImgContainer = styled.div`
   width: 100%;
-  height: 80%;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,7 @@ const StyledImg = styled.img`
 
 const StyledControlsContainer = styled.div`
   width: 100%;
-  height: 20%;
+  height: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;

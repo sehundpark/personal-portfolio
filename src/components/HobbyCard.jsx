@@ -13,8 +13,9 @@ const StyledCard = styled.div`
   border: 2px solid #000;
   border-radius: 8px;
   padding: 16px;
-  width: 450px;
-  height: 625px;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 450 / 625;
   display: flex;
   flex-direction: column;
 `;

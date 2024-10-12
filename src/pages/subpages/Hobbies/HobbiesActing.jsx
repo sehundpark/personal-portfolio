@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { ImageSlider } from "../../components/ImageSlider";
-import { images } from "../../components/ImageImportBundles/HobbiesActingImagesImport.jsx";
-import { HobbyCard } from "../../components/HobbyCard";
+import { ImageSlider } from "../../../components/ImageSlider.jsx";
+import { images } from "../../../components/ImageImportBundles/HobbiesActingImagesImport.jsx";
+import { HobbyCard } from "../../../components/HobbyCard.jsx";
 
 export const HobbiesActing = () => {
   const content = (

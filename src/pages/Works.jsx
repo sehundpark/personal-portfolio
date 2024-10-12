@@ -59,6 +59,7 @@ export const Works = () => {
     },
     //More as necessary
   ];
+
   return (
     <StyledWorks>
       <StyledWorksHeader>My Works</StyledWorksHeader>
@@ -79,17 +80,28 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
 `;
 
 const StyledWorksHeader = styled.h2`
-  //
+  text-align: center;
+  margin-bottom: 2rem;
 `;
 
 const StyledWorksProjectGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(2, minmax(auto, 550px));
+  }
 `;

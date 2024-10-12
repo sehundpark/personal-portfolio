@@ -3,42 +3,70 @@ import styled from "styled-components";
 
 export const Navbar = () => {
   return (
-    <StyledNavbar>
-      <StyledNavbarUL>
-        <StyledNavbarLI>
-          <Link to="/">Home</Link>
-        </StyledNavbarLI>
-        <StyledNavbarLI>
-          <Link to="/works">Works</Link>
-        </StyledNavbarLI>
-        <StyledNavbarLI>
-          <Link to="/about">About</Link>
-        </StyledNavbarLI>
-      </StyledNavbarUL>
-    </StyledNavbar>
+    <StyledNavbarContainer>
+      <StyledNavbar>
+        <StyledNavbarUL>
+          <StyledNavbarLI>
+            <StyledLink to="/">Home</StyledLink>
+          </StyledNavbarLI>
+          <StyledNavbarLI>
+            <StyledLink to="/works">Works</StyledLink>
+          </StyledNavbarLI>
+          <StyledNavbarLI>
+            <StyledLink to="/about">About</StyledLink>
+          </StyledNavbarLI>
+        </StyledNavbarUL>
+      </StyledNavbar>
+    </StyledNavbarContainer>
   );
 };
 
-const StyledNavbar = styled.nav`
-  display: flex;
+const StyledNavbarContainer = styled.div`
   width: 100%;
-  border: 2px solid gray;
-  border-radius: 5px;
+  display: flex;
   justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+`;
+
+const StyledNavbar = styled.nav`
+  width: 100%;
+  max-width: 1200px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 0.5rem;
 `;
 
 const StyledNavbarUL = styled.ul`
   display: flex;
   flex-direction: row;
-  gap: 50px;
-  padding: 5px;
-  margin: 0px 5px;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const StyledNavbarLI = styled.li`
   display: flex;
-  padding: 5px 10px;
-  margin: 5px;
-  border: 2px solid gray;
-  border-radius: 5px;
+`;
+
+const StyledLink = styled(Link)`
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 `;
