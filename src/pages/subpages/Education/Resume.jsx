@@ -333,7 +333,7 @@ const ProjectItem = styled.div`
   text-align: center;
 
   h3 {
-    color: #2c3e50;
+    var(--secondary-color);
     margin-bottom: 0.5rem;
   }
 
@@ -383,7 +383,7 @@ const EducationItem = styled.div`
   margin-bottom: 1rem;
 
   h3 {
-    color: #2c3e50;
+    color: var(--secondary-color);
     margin-bottom: 0.5rem;
   }
 `;
@@ -392,7 +392,7 @@ const CourseCategory = styled.div`
   margin-bottom: 1.5rem;
 
   h3 {
-    color: #2c3e50;
+    color: var(--secondary-color);
     margin-bottom: 0.5rem;
   }
 `;

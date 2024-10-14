@@ -13,7 +13,7 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
   --skill-bg: #3498db;
   --skill-text: #ffffff;
-  --footer-bg: #d1c6a7;
+  --footer-bg: #ffffff;
   --footer-text: #333333;
   --footer-link-color: #2980b9;
 
@@ -43,6 +43,8 @@
   --shadow-color: rgba(255, 255, 255, 0.1);
   --skill-bg: #3498db;
   --skill-text: #ffffff;
+  --button-bg: #3498db;
+  --button-text: #ffffff;
   --footer-bg: #2c3e50;
   --footer-text: #ffffff;
   --footer-link-color: #5dade2;

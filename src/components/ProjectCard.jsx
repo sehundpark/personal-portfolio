@@ -85,7 +85,7 @@ const ImageWrapper = styled.div`
 
 const StyledButton = styled.button`
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   padding: 8px 16px;
@@ -95,6 +95,7 @@ const StyledButton = styled.button`
 
   &:hover {
     background-color: var(--secondary-color);
+    color: #ffffff;
   }
 `;
 
