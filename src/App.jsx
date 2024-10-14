@@ -5,12 +5,14 @@ import { Home } from "./pages/Home";
 import { Works } from "./pages/Works";
 import { About } from "./pages/About";
 import { ThemeProvider } from "./components/ThemeContext";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 const AppContent = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/works" element={<Works />} />
