@@ -9,6 +9,13 @@
   --card-background: #ffffff;
   --navbar-bg: #ffffff;
   --hover-bg: #e9ecef;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --skill-bg: #3498db;
+  --skill-text: #ffffff;
+  --footer-bg: #d1c6a7;
+  --footer-text: #333333;
+  --footer-link-color: #2980b9;
 
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
@@ -25,13 +32,20 @@
 
 [data-theme="dark"] {
   --primary-color: #3498db;
-  --secondary-color: #34495e;
+  --secondary-color: #4490db;
   --accent-color: #e74c3c;
   --background-color: #1a1a1a;
   --text-color: #ffffff;
   --card-background: #2c3e50;
   --navbar-bg: #2c3e50;
   --hover-bg: #34495e;
+  --border-color: #444;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --skill-bg: #3498db;
+  --skill-text: #ffffff;
+  --footer-bg: #2c3e50;
+  --footer-text: #ffffff;
+  --footer-link-color: #5dade2;
 }
 
 body {
@@ -39,6 +53,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1,
@@ -67,9 +83,7 @@ h4 {
 }
 
 a {
-  font-weight: 500;
   color: var(--primary-color);
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -115,9 +129,9 @@ button:focus-visible {
 input,
 textarea,
 select {
-  background-color: var(--background-color);
+  background-color: var(--card-background);
   color: var(--text-color);
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
 }
 
 ::placeholder {

@@ -75,6 +75,7 @@ const StyledHomeSectionOne = styled.div`
   align-items: center;
   width: 100%;
   border: 2px solid var(--primary-color);
+  background-color: var(--card-background);
   border-radius: 8px;
   padding: 2rem;
   box-sizing: border-box;
@@ -122,7 +123,7 @@ const StyledButton = styled.button`
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   border-radius: 4px;
   border: none;

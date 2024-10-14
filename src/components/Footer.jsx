@@ -37,10 +37,25 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 2rem 0;
   margin-top: 2rem;
+`;
+
+const SocialLink = styled.a`
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 const FooterContent = styled.div`
@@ -51,6 +66,7 @@ const FooterContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  color: var(--footer-text);
 `;
 
 const ContactInfo = styled.div`
@@ -68,20 +84,10 @@ const ContactInfo = styled.div`
 const SocialLinks = styled.div`
   display: flex;
   gap: 1rem;
-`;
-
-const SocialLink = styled.a`
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: var(--footer-text);
 
   &:hover {
     color: var(--primary-color);
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
   }
 `;
 
@@ -89,6 +95,7 @@ const Copyright = styled.p`
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
+  color: var(--footer-text);
 `;
 
 const GitHubIcon = () => (

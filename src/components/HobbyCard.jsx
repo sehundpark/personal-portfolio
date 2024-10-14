@@ -10,7 +10,7 @@ export const HobbyCard = ({ content, imageSlider }) => {
 };
 
 const StyledCard = styled.div`
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
   width: 100%;
@@ -20,7 +20,7 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--card-background);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--shadow-color);
   transition: transform 0.3s ease;
 
   &:hover {

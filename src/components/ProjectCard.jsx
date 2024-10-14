@@ -40,7 +40,7 @@ export const ProjectCard = ({
 };
 
 const StyledCard = styled.div`
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 16px;
   width: 100%;
@@ -53,27 +53,18 @@ const StyledCard = styled.div`
   box-sizing: border-box;
   background-color: var(--card-background);
   color: var(--text-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px var(--shadow-color);
   }
 `;
 
 const ContentWrapper = styled.div`
-  flex: 1;
-  overflow-y: auto;
-  margin-bottom: 16px;
-  padding-right: 8px;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--background-color);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -84,12 +75,27 @@ const ContentWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   height: 50%;
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 8px;
+`;
+
+const StyledButton = styled.button`
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
 `;
 
 const StyledCardTitle = styled.h3`
@@ -111,19 +117,4 @@ const StyledButtonContainer = styled.div`
   justify-content: center;
   margin-top: 15px;
   gap: 15px;
-`;
-
-const StyledButton = styled.button`
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-
-  &:hover {
-    background-color: var(--secondary-color);
-  }
 `;

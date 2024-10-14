@@ -241,11 +241,11 @@ const StyledResume = styled.div`
   padding: 2rem;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-color);
   position: relative;
 `;
 
@@ -261,11 +261,11 @@ const SocialLink = styled(Link)`
   display: inline-block;
   width: 24px;
   height: 24px;
-  color: #333;
+  color: var(--text-color);
   transition: color 0.3s ease;
 
   &:hover {
-    color: #3498db;
+    color: var(--primary-color);
   }
 `;
 
@@ -298,8 +298,8 @@ const Section = styled.section`
   margin-bottom: 2rem;
 
   h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
   }
@@ -320,8 +320,8 @@ const SkillList = styled.ul`
 `;
 
 const SkillItem = styled.li`
-  background-color: #3498db;
-  color: white;
+  background-color: var(--skill-bg);
+  color: var(--skill-text);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -350,8 +350,9 @@ const ProjectLinks = styled.div`
 `;
 
 const ProjectButton = styled.a`
-  background-color: white;
-  border: 2px solid black;
+  background-color: var(--card-background);
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
   border-radius: 20px;
   padding: 5px 10px;
   cursor: pointer;
@@ -360,7 +361,7 @@ const ProjectButton = styled.a`
   font-size: 14px;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: var(--hover-bg);
   }
 `;
 
@@ -368,7 +369,7 @@ const ViewMoreLink = styled(Link)`
   display: block;
   text-align: center;
   margin-top: 1rem;
-  color: #3498db;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
@@ -404,23 +405,23 @@ const CourseList = styled.ul`
 const CourseItem = styled.li`
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px var(--shadow-color);
   }
 `;
 
 const CourseName = styled.h4`
   margin: 0 0 0.5rem 0;
-  color: #2980b9;
+  color: var(--primary-color);
 `;
 
 const CourseDescription = styled.p`
   margin: 0;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-color);
 `;

@@ -84,7 +84,7 @@ const StyledButtonContainer = styled.div`
 
 const StyledSlideshowNavigationButton = styled.button`
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color);
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -101,11 +101,6 @@ const StyledSlideshowNavigationButton = styled.button`
   }
 `;
 
-const StyledDotContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 const StyledDot = styled.span`
   height: 8px;
   width: 8px;
@@ -115,4 +110,9 @@ const StyledDot = styled.span`
   display: inline-block;
   margin: 0 4px;
   transition: background-color 0.3s ease;
+`;
+
+const StyledDotContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;

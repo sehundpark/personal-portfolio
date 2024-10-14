@@ -26,8 +26,8 @@ const SkillsList = styled.ul`
 `;
 
 const SkillItem = styled.li`
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--skill-bg);
+  color: var(--skill-text);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;

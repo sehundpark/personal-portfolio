@@ -135,6 +135,8 @@ const StyledAboutPage = styled.div`
   padding: 2rem;
   text-align: center;
   box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
 `;
 
 const NavBar = styled.nav`
@@ -164,14 +166,9 @@ const NavItem = styled.button`
   }
 `;
 
-const Section = styled.section`
-  margin-bottom: 3rem;
-  scroll-margin-top: ${NAVBAR_HEIGHT + 20}px;
-`;
-
 const StyledAboutMeParagraph = styled.p`
   padding-bottom: 50px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--border-color);
   margin-bottom: 50px;
   text-align: center;
 `;
@@ -179,7 +176,12 @@ const StyledAboutMeParagraph = styled.p`
 const Hobbies = styled.div`
   margin-top: 50px;
   padding-top: 40px;
-  border-top: 2px solid black;
+  border-top: 2px solid var(--border-color);
+`;
+
+const Section = styled.section`
+  margin-bottom: 3rem;
+  scroll-margin-top: ${NAVBAR_HEIGHT + 20}px;
 `;
 
 const HobbiesGrid = styled.div`
