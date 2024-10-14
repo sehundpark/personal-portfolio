@@ -1,7 +1,7 @@
 import BattleShipGIF from "../../assets/works/battleship.gif";
 import ShoppingCartGIF from "../../assets/works/shoppingcart.gif";
 import TaskPlannerGIF from "../../assets/works/taskplanner.gif";
-import PokemonMemoryCardPNG from "../../assets/works/pokemonmemorycard.png";
+import PokemonMemoryCardGIF from "../../assets/works/pokemonmemorycard.gif";
 import EtchASketchGIF from "../../assets/works/etchsketch.gif";
 import TicTacToeGIF from "../../assets/works/tictactoe.gif";
 
@@ -31,7 +31,7 @@ export const projectsData = [
     demo: "https://sehundpark.github.io/todo-list/",
   },
   {
-    image: PokemonMemoryCardPNG,
+    image: PokemonMemoryCardGIF,
     title: "Pokemon Memory Game",
     description:
       "This project is a fun and interactive memory game featuring Pokemon characters. Players click on Pokemon cards to earn points, but must remember which ones they've clicked to avoid repeating and losing the game.",
