@@ -79,7 +79,7 @@ export const About = () => {
 
       <Section id="about">
         <h2>About Me</h2>
-        <StyledAboutMeParagraph>
+        {/* <StyledAboutMeParagraph>
           Hello! My name is Sehun. I'm currently searching for work as a Junior
           Front-End Developer. I began to learn about web development with The
           Odin Project. I was previously working in marketing, but realized that
@@ -108,7 +108,7 @@ export const About = () => {
           journey in my life. My mission is to continue learning and growing in
           this world where creativity and tech intermingles, both seemingly
           opposite ends but somehow intertwined like myself.
-        </StyledAboutMeParagraph>
+        </StyledAboutMeParagraph> */}
       </Section>
 
       <Section id="resume">
@@ -166,12 +166,12 @@ const NavItem = styled.button`
   }
 `;
 
-const StyledAboutMeParagraph = styled.p`
-  padding-bottom: 50px;
-  border-bottom: 2px solid var(--border-color);
-  margin-bottom: 50px;
-  text-align: center;
-`;
+// const StyledAboutMeParagraph = styled.p`
+//   padding-bottom: 50px;
+//   border-bottom: 2px solid var(--border-color);
+//   margin-bottom: 50px;
+//   text-align: center;
+// `;
 
 const Hobbies = styled.div`
   margin-top: 50px;

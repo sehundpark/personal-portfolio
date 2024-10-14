@@ -7,7 +7,6 @@ export const Footer = () => {
         <ContactInfo>
           <h4>Contact Me</h4>
           <p>Email: sehunpcodes@gmail.com</p>
-          <p>Phone: (760) 791-2383</p>
           <p>Location: Los Angeles, CA</p>
         </ContactInfo>
         <SocialLinks>

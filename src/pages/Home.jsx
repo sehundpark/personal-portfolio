@@ -16,12 +16,12 @@ export const Home = () => {
     "Adobe Photoshop",
   ];
 
-  const scrollToFooter = () => {
-    const footer = document.querySelector("footer");
-    if (footer) {
-      footer.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToFooter = () => {
+  //   const footer = document.querySelector("footer");
+  //   if (footer) {
+  //     footer.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <StyledHomeContainer>
@@ -119,19 +119,19 @@ const StyledSection = styled.section`
   margin-bottom: 2rem;
 `;
 
-const StyledButton = styled.button`
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  text-decoration: none;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+// const StyledButton = styled.button`
+//   display: inline-block;
+//   padding: 0.5rem 1rem;
+//   background-color: var(--primary-color);
+//   color: var(--text-color);
+//   text-decoration: none;
+//   border-radius: 4px;
+//   border: none;
+//   cursor: pointer;
+//   font-size: 1rem;
+//   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: var(--secondary-color);
-  }
-`;
+//   &:hover {
+//     background-color: var(--secondary-color);
+//   }
+// `;

@@ -148,7 +148,7 @@ export const Resume = () => {
 
       <h1>Sehun Park</h1>
       <ContactInfo>
-        <p>sehunpcodes@gmail.com | (760) 791-2383 | Los Angeles, CA</p>
+        <p>sehunpcodes@gmail.com | Los Angeles, CA</p>
       </ContactInfo>
 
       <Section>
