@@ -4,7 +4,7 @@ This project is a React-based personal portfolio website that showcases my skill
 
 ## Live Demo
 
-Check out the live demo of the project: [Sehun Park's Portfolio](https://sehunpark.com)
+Check out the live demo of the project: [Sehun Park's Portfolio](https://sehundpark.netlify.app/)
 
 ## Features
 
@@ -43,31 +43,6 @@ Check out the live demo of the project: [Sehun Park's Portfolio](https://sehunpa
 - `HobbyCard.jsx`: Displays information about hobbies with image sliders
 - `NavBar.jsx`: Navigation component with theme toggle
 - `Footer.jsx`: Footer component with contact information
-
-## Setup and Installation
-
-1. Clone the repository:
-
-   ```
-   git clone https://github.com/sehundpark/portfolio.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```
-   cd portfolio
-   ```
-
-3. Install dependencies:
-
-   ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm start
-   ```
 
 ## Usage
 
