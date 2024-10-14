@@ -20,7 +20,7 @@ const SkillsContainer = styled.section`
 const SkillsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   list-style-type: none;
   padding: 0;
 `;
