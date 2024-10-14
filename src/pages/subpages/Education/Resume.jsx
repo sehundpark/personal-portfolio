@@ -236,7 +236,7 @@ export const Resume = () => {
 };
 
 const StyledResume = styled.div`
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   font-family: Arial, sans-serif;
