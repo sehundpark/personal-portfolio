@@ -10,8 +10,8 @@ export const Home = () => {
     "React",
     "HTML",
     "CSS",
+    "Styled Components",
     "Git",
-    "Responsive Design",
     "Adobe Lightroom",
     "Adobe Photoshop",
   ];
