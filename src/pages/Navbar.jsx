@@ -14,7 +14,7 @@ export const Navbar = () => {
             <StyledLink to="/">Home</StyledLink>
           </StyledNavbarLI>
           <StyledNavbarLI>
-            <StyledLink to="/works">Works</StyledLink>
+            <StyledLink to="/projects">Projects</StyledLink>
           </StyledNavbarLI>
           <StyledNavbarLI>
             <StyledLink to="/snapshots">Snapshots</StyledLink>

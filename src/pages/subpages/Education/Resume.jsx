@@ -160,7 +160,7 @@ export const Resume = () => {
         </ContactInfo>
       </Header>
 
-      <Section title="Professional Summary">
+      {/* <Section title="Professional Summary">
         <Summary>
           Self-taught Front-End Developer with a passion for combining
           technology and creativity to create impactful, user-focused solutions.
@@ -169,7 +169,7 @@ export const Resume = () => {
           service), providing a unique perspective and strong communication
           skills.
         </Summary>
-      </Section>
+      </Section> */}
 
       <Section title="Skills">
         <SkillsGrid>

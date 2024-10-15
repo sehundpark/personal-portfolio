@@ -3,7 +3,7 @@ import ShoppingCartGIF from "../../assets/works/shoppingcart.gif";
 import TaskPlannerGIF from "../../assets/works/taskplanner.gif";
 import PokemonMemoryCardGIF from "../../assets/works/pokemonmemorycard.gif";
 import EtchASketchGIF from "../../assets/works/etchsketch.gif";
-import TicTacToeGIF from "../../assets/works/tictactoe.gif";
+// import TicTacToeGIF from "../../assets/works/tictactoe.gif";
 
 export const projectsData = [
   {

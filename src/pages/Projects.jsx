@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ProjectCard } from "../components/Card/ProjectCard";
 import { projectsData } from "../components/Projects/ProjectsData";
 
-export const Works = () => {
+export const Projects = () => {
   return (
     <StyledWorks>
       <StyledWorksHeader>Projects</StyledWorksHeader>
