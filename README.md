@@ -1,6 +1,7 @@
 # Sehun Park's Portfolio
 
-![Portfolio Preview](img-url to be added.)
+![personalportfolio](https://github.com/user-attachments/assets/2550caea-6fde-48fe-8111-ee12a06e249e)
+
 
 This project is a React-based personal portfolio website that showcases my skills as a Front-End Developer and highlights some of my recent work.
 
