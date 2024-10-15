@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export const AnimatedIntro = () => {
   const el1 = useRef(null);
   const el2 = useRef(null);
-  const el3 = useRef(null);
   const [showIcons, setShowIcons] = useState(false);
 
   useEffect(() => {
@@ -37,16 +36,7 @@ export const AnimatedIntro = () => {
 
     const typed2 = new Typed(el2.current, {
       ...options,
-      strings: ["I'm a Front-End Developer."],
-      onComplete: (self) => {
-        removeCursor(self);
-        startNextTyped(typed3);
-      },
-    });
-
-    const typed3 = new Typed(el3.current, {
-      ...options,
-      strings: ["Self-taught via The Odin Project."],
+      strings: ["I'm a self-taught Front-End Developer."],
       onComplete: (self) => {
         removeCursor(self);
         setShowIcons(true);
@@ -56,7 +46,6 @@ export const AnimatedIntro = () => {
     return () => {
       typed1.destroy();
       typed2.destroy();
-      typed3.destroy();
     };
   }, []);
 
@@ -64,7 +53,6 @@ export const AnimatedIntro = () => {
     <IntroContainer>
       <MainIntroText ref={el1} />
       <SubIntroText ref={el2} />
-      <SubIntroText ref={el3} />
       {showIcons && (
         <SocialIcons>
           <SocialLink
