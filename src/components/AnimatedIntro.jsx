@@ -11,7 +11,7 @@ export const AnimatedIntro = () => {
 
   useEffect(() => {
     const options = {
-      typeSpeed: 30,
+      typeSpeed: 20,
       backSpeed: 0,
       showCursor: false,
     };
