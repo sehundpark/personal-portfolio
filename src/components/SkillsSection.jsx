@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SkillsSection = ({ skills }) => {
   return (
     <SkillsContainer>
-      <h2>My Skills</h2>
+      <h2>Skills</h2>
       <SkillsList>
         {skills.map((skill, index) => (
           <SkillItem key={index}>{skill}</SkillItem>

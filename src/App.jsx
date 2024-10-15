@@ -4,7 +4,7 @@ import { Footer } from "./pages/Footer";
 import { Home } from "./pages/Home";
 import { Works } from "./pages/Works";
 import { Snapshots } from "./pages/Snapshots";
-import { ResumePage } from "./pages/subpages/Education/ResumePage";
+import { ResumePage } from "./pages/ResumePage";
 import { ThemeProvider } from "./components/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";

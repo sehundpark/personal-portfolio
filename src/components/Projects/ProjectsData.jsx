@@ -46,12 +46,12 @@ export const projectsData = [
     link: "https://github.com/sehundpark/etch-a-sketch",
     demo: "https://sehundpark.github.io/etch-a-sketch/",
   },
-  {
-    image: TicTacToeGIF,
-    title: "Tic-Tac-Toe",
-    description:
-      "A classic Tic-Tac-Toe game implemented with HTML, CSS, and JavaScript. This project features a clean user interface, customizable player names and symbols, and a responsive design.",
-    link: "https://github.com/sehundpark/tic-tac-toe",
-    demo: "https://sehundpark.github.io/tic-tac-toe/",
-  },
+  // {
+  //   image: TicTacToeGIF,
+  //   title: "Tic-Tac-Toe",
+  //   description:
+  //     "A classic Tic-Tac-Toe game implemented with HTML, CSS, and JavaScript. This project features a clean user interface, customizable player names and symbols, and a responsive design.",
+  //   link: "https://github.com/sehundpark/tic-tac-toe",
+  //   demo: "https://sehundpark.github.io/tic-tac-toe/",
+  // },
 ];

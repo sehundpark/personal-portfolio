@@ -5,7 +5,7 @@ import { projectsData } from "../components/Projects/ProjectsData";
 export const Works = () => {
   return (
     <StyledWorks>
-      <StyledWorksHeader>My Works</StyledWorksHeader>
+      <StyledWorksHeader>Projects</StyledWorksHeader>
       <StyledWorksProjectGrid>
         {projectsData.map((project, index) => (
           <ProjectCard

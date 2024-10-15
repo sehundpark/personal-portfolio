@@ -12,8 +12,8 @@ export const Home = () => {
     "CSS",
     "Styled Components",
     "Git",
-    "Adobe Lightroom",
-    "Adobe Photoshop",
+    // "Adobe Lightroom",
+    // "Adobe Photoshop",
   ];
 
   // const scrollToFooter = () => {

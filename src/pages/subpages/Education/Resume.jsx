@@ -40,20 +40,20 @@ const skillsData = [
       "VS Code",
       "Webpack",
       "npm",
-      "Adobe Lightroom",
-      "Adobe Photoshop",
+      // "Adobe Lightroom",
+      // "Adobe Photoshop",
     ],
   },
-  {
-    category: "Soft Skills",
-    skills: [
-      "Problem Solving",
-      "Creativity",
-      "Communication",
-      "Adaptability",
-      "Interpersonal Skills",
-    ],
-  },
+  // {
+  //   category: "Soft Skills",
+  //   skills: [
+  //     "Problem Solving",
+  //     "Creativity",
+  //     "Communication",
+  //     "Adaptability",
+  //     "Interpersonal Skills",
+  //   ],
+  // },
 ];
 
 const featuredProjects = [
@@ -184,6 +184,21 @@ export const Resume = () => (
       </Summary>
     </Section>
 
+    <Section title="Skills">
+      <SkillsGrid>
+        {skillsData.map((skillCategory, index) => (
+          <SkillCategory key={index}>
+            <SkillTitle>{skillCategory.category}</SkillTitle>
+            <SkillList>
+              {skillCategory.skills.map((skill, skillIndex) => (
+                <Skill key={skillIndex}>{skill}</Skill>
+              ))}
+            </SkillList>
+          </SkillCategory>
+        ))}
+      </SkillsGrid>
+    </Section>
+
     <Section title="Featured Projects">
       <ProjectGrid>
         {featuredProjects.map((project, index) => (
@@ -213,14 +228,18 @@ export const Resume = () => (
     </Section>
 
     <Section title="Education">
-      {educationData.map((edu, index) => (
-        <EducationItem key={index}>
-          <Degree>{edu.type}</Degree>
-          {edu.details.map((detail, detailIndex) => (
-            <EducationDetail key={detailIndex}>{detail}</EducationDetail>
-          ))}
-        </EducationItem>
-      ))}
+      <ul>
+        {educationData.map((edu, index) => (
+          <EducationItem key={index}>
+            <Degree>{edu.type}</Degree>
+            <ul>
+              {edu.details.map((detail, detailIndex) => (
+                <EducationDetail key={detailIndex}>{detail}</EducationDetail>
+              ))}
+            </ul>
+          </EducationItem>
+        ))}
+      </ul>
     </Section>
 
     <Section title="Relevant Coursework">
@@ -237,21 +256,6 @@ export const Resume = () => (
           </CourseList>
         </CourseCategory>
       ))}
-    </Section>
-
-    <Section title="Skills">
-      <SkillsGrid>
-        {skillsData.map((skillCategory, index) => (
-          <SkillCategory key={index}>
-            <SkillTitle>{skillCategory.category}</SkillTitle>
-            <SkillList>
-              {skillCategory.skills.map((skill, skillIndex) => (
-                <Skill key={skillIndex}>{skill}</Skill>
-              ))}
-            </SkillList>
-          </SkillCategory>
-        ))}
-      </SkillsGrid>
     </Section>
   </ResumeContainer>
 );
@@ -399,7 +403,7 @@ const ViewMoreLink = styled(Link)`
   }
 `;
 
-const EducationItem = styled.div`
+const EducationItem = styled.li`
   margin-bottom: 1rem;
 `;
 
@@ -409,7 +413,7 @@ const Degree = styled.h3`
   color: var(--primary-color);
 `;
 
-const EducationDetail = styled.p`
+const EducationDetail = styled.li`
   margin: 0;
   font-size: 0.9rem;
 `;

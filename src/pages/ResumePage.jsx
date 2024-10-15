@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { Resume } from "./Resume";
+import { Resume } from "./subpages/Education/Resume";
 
 export const ResumePage = () => {
   return (
     <StyledResumePage>
-      <PageHeader>My Resume</PageHeader>
+      <PageHeader>Resume</PageHeader>
       <ResumeWrapper>
         <Resume />
       </ResumeWrapper>
