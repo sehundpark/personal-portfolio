@@ -1,11 +1,18 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import { Resume } from "./subpages/Education/Resume";
+import { DownloadPDFButton } from "../components/DownloadPDFButton";
 
 export const ResumePage = () => {
+  const resumeRef = useRef();
+
   return (
     <StyledResumePage>
       <PageHeader>Resume</PageHeader>
-      <ResumeWrapper>
+      <ButtonContainer>
+        <DownloadPDFButton contentRef={resumeRef} />
+      </ButtonContainer>
+      <ResumeWrapper ref={resumeRef}>
         <Resume />
       </ResumeWrapper>
     </StyledResumePage>
@@ -30,4 +37,11 @@ const ResumeWrapper = styled.div`
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 `;

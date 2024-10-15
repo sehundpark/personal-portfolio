@@ -423,7 +423,7 @@ const CourseCategory = styled.div`
 `;
 
 const CourseTitle = styled.h3`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
 `;
@@ -446,7 +446,8 @@ const CourseItem = styled.li`
   }
 `;
 
-const CourseName = styled.h4`
+const CourseName = styled.h3`
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   color: var(--primary-color);
 `;
