@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { DownloadPDFButton } from "../../../components/DownloadPDFButton";
 
 const LinkedInIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor">
@@ -133,9 +134,13 @@ const coursesData = [
 
 export const Resume = () => {
   const [isDetailedView, setIsDetailedView] = useState(false);
+  const resumeRef = useRef();
 
   return (
-    <ResumeContainer>
+    <ResumeContainer ref={resumeRef}>
+      <DownloadButtonWrapper>
+        <DownloadPDFButton contentRef={resumeRef} />
+      </DownloadButtonWrapper>
       <Header>
         <Name>Sehun Park</Name>
         <ContactInfo>
@@ -215,18 +220,18 @@ export const Resume = () => {
       </Section>
 
       <Section title="Education">
-        <ul>
-          {educationData.map((edu, index) => (
-            <EducationItem key={index}>
-              <Degree>{edu.type}</Degree>
-              <ul>
-                {edu.details.map((detail, detailIndex) => (
-                  <EducationDetail key={detailIndex}>{detail}</EducationDetail>
-                ))}
-              </ul>
-            </EducationItem>
-          ))}
-        </ul>
+        {educationData.map((edu, index) => (
+          <EducationItem key={index}>
+            <Degree>{edu.type}</Degree>
+            <EducationList>
+              {edu.details.map((detail, detailIndex) => (
+                <EducationListItem key={detailIndex}>
+                  {detail}
+                </EducationListItem>
+              ))}
+            </EducationList>
+          </EducationItem>
+        ))}
       </Section>
 
       <Section title="Relevant Coursework">
@@ -290,12 +295,19 @@ const DetailedCoursesView = ({ courses }) => (
 );
 
 const ResumeContainer = styled.div`
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   font-family: "Arial", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
+`;
+
+const DownloadButtonWrapper = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 `;
 
 const Header = styled.header`
@@ -337,9 +349,9 @@ const SectionTitle = styled.h2`
   margin-bottom: 1rem;
 `;
 
-const Summary = styled.p`
-  line-height: 1.6;
-`;
+// const Summary = styled.p`
+//   line-height: 1.6;
+// `;
 
 const SkillsGrid = styled.div`
   display: grid;
@@ -425,7 +437,16 @@ const ViewMoreLink = styled(Link)`
   }
 `;
 
-const EducationItem = styled.li`
+const EducationList = styled.ul`
+  padding-left: 20px;
+`;
+
+const EducationListItem = styled.li`
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+`;
+
+const EducationItem = styled.div`
   margin-bottom: 1rem;
 `;
 
@@ -433,11 +454,6 @@ const Degree = styled.h3`
   font-size: 1.1rem;
   margin-bottom: 0.25rem;
   color: var(--primary-color);
-`;
-
-const EducationDetail = styled.li`
-  margin: 0;
-  font-size: 0.9rem;
 `;
 
 const CoursesContainer = styled.div`
