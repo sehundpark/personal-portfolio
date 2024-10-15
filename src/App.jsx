@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { Navbar } from "./pages/Navbar";
+import { Footer } from "./pages/Footer";
 import { Home } from "./pages/Home";
 import { Works } from "./pages/Works";
-import { About } from "./pages/About";
+import { Snapshots } from "./pages/Snapshots";
+import { ResumePage } from "./pages/subpages/Education/ResumePage";
 import { ThemeProvider } from "./components/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
@@ -16,7 +17,8 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/works" element={<Works />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/snapshots" element={<Snapshots />} />
+        <Route path="/resume" element={<ResumePage />} />
       </Routes>
       <Footer />
     </>

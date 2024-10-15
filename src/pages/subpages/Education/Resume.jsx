@@ -1,19 +1,26 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const educationData = [
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  </svg>
+);
+
+const GitHubIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+  </svg>
+);
+
+const contactInfo = [
+  { icon: "📍", text: "Los Angeles, CA" },
+  { icon: "📧", text: "sehunpcodes@gmail.com" },
   {
-    type: "Degree",
-    details: [
-      "University of California, Davis",
-      "Bachelor of Arts in Theatre and Dance",
-      "September 2017- June 2021",
-    ],
+    icon: <LinkedInIcon />,
+    link: "https://www.linkedin.com/in/sehun-park-5b280b164",
   },
-  {
-    type: "Coding Bootcamp",
-    details: ["The Odin Project", "September 4, 2023 - Present"],
-  },
+  { icon: <GitHubIcon />, link: "https://github.com/sehundpark" },
 ];
 
 const skillsData = [
@@ -46,6 +53,45 @@ const skillsData = [
       "Adaptability",
       "Interpersonal Skills",
     ],
+  },
+];
+
+const featuredProjects = [
+  {
+    title: "Battleship",
+    description:
+      "A web-based implementation of the classic naval combat strategy game, featuring interactive ship placement and an intelligent computer opponent.",
+    demo: "https://sehundpark.github.io/battleship/",
+    link: "https://github.com/sehundpark/battleship",
+  },
+  {
+    title: "Shopping Cart",
+    description:
+      "A React-based shopping cart application allowing users to browse products, add them to a cart, and manage their shopping experience.",
+    demo: "https://sehunshoppingcart.netlify.app/",
+    link: "https://github.com/sehundpark/shopping-cart",
+  },
+  {
+    title: "Task Planner",
+    description:
+      "A comprehensive task management application built with JavaScript, enabling users to organize tasks into categories and projects.",
+    demo: "https://sehundpark.github.io/todo-list/",
+    link: "https://github.com/sehundpark/todo-list",
+  },
+];
+
+const educationData = [
+  {
+    type: "Degree",
+    details: [
+      "University of California, Davis",
+      "Bachelor of Arts in Theatre and Dance",
+      "September 2017- June 2021",
+    ],
+  },
+  {
+    type: "Coding Bootcamp",
+    details: ["The Odin Project", "September 4, 2023 - Present"],
   },
 ];
 
@@ -102,266 +148,241 @@ const coursesData = [
   },
 ];
 
-const featuredProjects = [
-  {
-    title: "Battleship",
-    description:
-      "A web-based implementation of the classic naval combat strategy game, featuring interactive ship placement and an intelligent computer opponent.",
-    demo: "https://sehundpark.github.io/battleship/",
-    link: "https://github.com/sehundpark/battleship",
-  },
-  {
-    title: "Shopping Cart",
-    description:
-      "A React-based shopping cart application allowing users to browse products, add them to a cart, and manage their shopping experience.",
-    demo: "https://sehunshoppingcart.netlify.app/",
-    link: "https://github.com/sehundpark/shopping-cart",
-  },
-  {
-    title: "Task Planner",
-    description:
-      "A comprehensive task management application built with JavaScript, enabling users to organize tasks into categories and projects.",
-    demo: "https://sehundpark.github.io/todo-list/",
-    link: "https://github.com/sehundpark/todo-list",
-  },
-];
-
-export const Resume = () => {
-  return (
-    <StyledResume>
-      <SocialLinks>
-        <SocialLink
-          to="https://www.linkedin.com/in/sehun-park-5b280b164"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedInIcon />
-        </SocialLink>
-        <SocialLink
-          to="https://github.com/sehundpark"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GitHubIcon />
-        </SocialLink>
-      </SocialLinks>
-
-      <h1>Sehun Park</h1>
+export const Resume = () => (
+  <ResumeContainer>
+    <Header>
+      <Name>Sehun Park</Name>
       <ContactInfo>
-        <p>sehunpcodes@gmail.com | Los Angeles, CA</p>
-      </ContactInfo>
-
-      <Section>
-        <h2>Professional Summary</h2>
-        <p>
-          Aspiring software developer with a strong foundation in web
-          technologies and a passion for creating efficient, scalable
-          applications. Skilled in JavaScript, React, HTML, and CSS, with a
-          portfolio of diverse projects demonstrating problem-solving abilities
-          and a keen eye for user experience.
-        </p>
-      </Section>
-
-      <Section>
-        <h2>Skills</h2>
-        {skillsData.map((skillCategory, index) => (
-          <SkillCategory key={index}>
-            <h3>{skillCategory.category}</h3>
-            <SkillList>
-              {skillCategory.skills.map((skill, skillIndex) => (
-                <SkillItem key={skillIndex}>{skill}</SkillItem>
-              ))}
-            </SkillList>
-          </SkillCategory>
+        {contactInfo.map((item, index) => (
+          <ContactItem key={index}>
+            {item.link ? (
+              <SocialLink
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.icon}
+              </SocialLink>
+            ) : (
+              <>
+                <Icon>{item.icon}</Icon>
+                {item.text}
+              </>
+            )}
+          </ContactItem>
         ))}
-      </Section>
+      </ContactInfo>
+    </Header>
 
-      <Section>
-        <h2>Featured Projects</h2>
+    <Section title="Professional Summary">
+      <Summary>
+        Self-taught Front-End Developer with a passion for combining technology
+        and creativity to create impactful, user-focused solutions. Diverse
+        professional background spanning creative industries (acting, cooking,
+        photography) and business roles (marketing, sales, customer service),
+        providing a unique perspective and strong communication skills.
+      </Summary>
+    </Section>
+
+    <Section title="Featured Projects">
+      <ProjectGrid>
         {featuredProjects.map((project, index) => (
           <ProjectItem key={index}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <ProjectTitle>{project.title}</ProjectTitle>
+            <ProjectDescription>{project.description}</ProjectDescription>
             <ProjectLinks>
-              <ProjectButton
+              <ProjectLink
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub
-              </ProjectButton>
-              <ProjectButton
+              </ProjectLink>
+              <ProjectLink
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Demo
-              </ProjectButton>
+              </ProjectLink>
             </ProjectLinks>
           </ProjectItem>
         ))}
-        <ViewMoreLink to="/works">View all projects</ViewMoreLink>
-      </Section>
+      </ProjectGrid>
+      <ViewMoreLink to="/works">View all projects</ViewMoreLink>
+    </Section>
 
-      <Section>
-        <h2>Education</h2>
-        {educationData.map((edu, index) => (
-          <EducationItem key={index}>
-            <h3>{edu.type}</h3>
-            {edu.details.map((detail, detailIndex) => (
-              <p key={detailIndex}>{detail}</p>
+    <Section title="Education">
+      {educationData.map((edu, index) => (
+        <EducationItem key={index}>
+          <Degree>{edu.type}</Degree>
+          {edu.details.map((detail, detailIndex) => (
+            <EducationDetail key={detailIndex}>{detail}</EducationDetail>
+          ))}
+        </EducationItem>
+      ))}
+    </Section>
+
+    <Section title="Relevant Coursework">
+      {coursesData.map((courseType, index) => (
+        <CourseCategory key={index}>
+          <CourseTitle>{courseType.type}</CourseTitle>
+          <CourseList>
+            {courseType.courses.map((course, courseIndex) => (
+              <CourseItem key={courseIndex}>
+                <CourseName>{course.name}</CourseName>
+                <CourseDescription>{course.description}</CourseDescription>
+              </CourseItem>
             ))}
-          </EducationItem>
-        ))}
-      </Section>
+          </CourseList>
+        </CourseCategory>
+      ))}
+    </Section>
 
-      <Section>
-        <h2>Relevant Coursework</h2>
-        {coursesData.map((courseType, index) => (
-          <CourseCategory key={index}>
-            <h3>{courseType.type}</h3>
-            <CourseList>
-              {courseType.courses.map((course, courseIndex) => (
-                <CourseItem key={courseIndex}>
-                  <CourseName>{course.name}</CourseName>
-                  <CourseDescription>{course.description}</CourseDescription>
-                </CourseItem>
+    <Section title="Skills">
+      <SkillsGrid>
+        {skillsData.map((skillCategory, index) => (
+          <SkillCategory key={index}>
+            <SkillTitle>{skillCategory.category}</SkillTitle>
+            <SkillList>
+              {skillCategory.skills.map((skill, skillIndex) => (
+                <Skill key={skillIndex}>{skill}</Skill>
               ))}
-            </CourseList>
-          </CourseCategory>
+            </SkillList>
+          </SkillCategory>
         ))}
-      </Section>
-    </StyledResume>
-  );
-};
+      </SkillsGrid>
+    </Section>
+  </ResumeContainer>
+);
 
-const StyledResume = styled.div`
-  max-width: 100%;
+const Section = ({ title, children }) => (
+  <SectionWrapper>
+    <SectionTitle>{title}</SectionTitle>
+    {children}
+  </SectionWrapper>
+);
+
+const ResumeContainer = styled.div`
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Arial", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px var(--shadow-color);
-  position: relative;
 `;
 
-const SocialLinks = styled.div`
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: flex;
-  gap: 0.5rem;
+const Header = styled.header`
+  text-align: center;
+  margin-bottom: 2rem;
 `;
 
-const SocialLink = styled(Link)`
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  color: var(--text-color);
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: var(--primary-color);
-  }
+const Name = styled.h1`
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 `;
-
-const LinkedInIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
-    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-  </svg>
-);
-
-const GitHubIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
-    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-  </svg>
-);
 
 const ContactInfo = styled.div`
-  text-align: center;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 `;
 
-const Section = styled.section`
+const ContactItem = styled.span`
+  display: flex;
+  align-items: center;
+`;
+
+const Icon = styled.span`
+  margin-right: 0.5rem;
+`;
+
+const SectionWrapper = styled.section`
   margin-bottom: 2rem;
-
-  h2 {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-  }
 `;
 
-const SkillCategory = styled.div`
+const SectionTitle = styled.h2`
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
-  text-align: center;
+`;
+
+const Summary = styled.p`
+  line-height: 1.6;
+`;
+
+const SkillsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+`;
+
+const SkillCategory = styled.div``;
+
+const SkillTitle = styled.h3`
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 `;
 
 const SkillList = styled.ul`
   list-style-type: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
 `;
 
-const SkillItem = styled.li`
-  background-color: var(--skill-bg);
-  color: var(--skill-text);
+const Skill = styled.li`
+  background-color: var(--card-background);
   padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
   display: inline-block;
+  margin-right: 0.5rem;
+`;
+
+const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 `;
 
 const ProjectItem = styled.div`
-  margin-bottom: 1.5rem;
-  text-align: center;
+  background-color: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
 
-  h3 {
-    var(--secondary-color);
-    margin-bottom: 0.5rem;
-  }
+const ProjectTitle = styled.h3`
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+`;
 
-  p {
-    margin-bottom: 1rem;
-  }
+const ProjectDescription = styled.p`
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 `;
 
 const ProjectLinks = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 0.5rem;
 `;
 
-const ProjectButton = styled.a`
-  background-color: var(--card-background);
-  border: 2px solid var(--text-color);
-  color: var(--text-color);
-  border-radius: 20px;
-  padding: 5px 10px;
-  cursor: pointer;
+const ProjectLink = styled.a`
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
   text-decoration: none;
-  color: inherit;
-  font-size: 14px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
 
   &:hover {
-    background-color: var(--hover-bg);
+    background-color: var(--secondary-color);
   }
 `;
 
@@ -372,7 +393,6 @@ const ViewMoreLink = styled(Link)`
   color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
 
   &:hover {
     text-decoration: underline;
@@ -381,20 +401,27 @@ const ViewMoreLink = styled(Link)`
 
 const EducationItem = styled.div`
   margin-bottom: 1rem;
+`;
 
-  h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-  }
+const Degree = styled.h3`
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--primary-color);
+`;
+
+const EducationDetail = styled.p`
+  margin: 0;
+  font-size: 0.9rem;
 `;
 
 const CourseCategory = styled.div`
   margin-bottom: 1.5rem;
+`;
 
-  h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-  }
+const CourseTitle = styled.h3`
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 `;
 
 const CourseList = styled.ul`
@@ -424,4 +451,18 @@ const CourseDescription = styled.p`
   margin: 0;
   font-size: 0.9rem;
   color: var(--text-color);
+`;
+
+const SocialLink = styled.a`
+  color: var(--text-color);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 `;

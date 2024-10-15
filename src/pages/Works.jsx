@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ProjectCard } from "../components/ProjectCard";
+import { ProjectCard } from "../components/Card/ProjectCard";
 import { projectsData } from "../components/Projects/ProjectsData";
 
 export const Works = () => {
@@ -39,6 +39,7 @@ const StyledWorksProjectGrid = styled.div`
   grid-template-columns: 1fr;
   gap: 2rem;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

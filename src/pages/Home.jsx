@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import profileAvatar from "../assets/profile-avatar.png";
 import { AnimatedIntro } from "../components/AnimatedIntro";
-import { ProjectShowcase } from "../components/ProjectShowcase";
+import { ProjectShowcase } from "../components/Projects/ProjectShowcase";
 import { SkillsSection } from "../components/SkillsSection";
 
 export const Home = () => {
@@ -37,11 +37,14 @@ export const Home = () => {
       <StyledSection>
         <h2>About Me</h2>
         <p>
-          I'm a self-taught Front-End Developer with a passion for creating
-          responsive and user-friendly web applications. With a background in
-          marketing and a love for problem-solving, I bring a unique perspective
-          to web development that focuses on both functionality and user
-          experience.
+          I’m a self-taught Front-End Developer driven by a passion for blending
+          technology and creativity to craft impactful user experiences. My
+          diverse background in creative fields like acting, cooking, and
+          photography, along with roles in marketing, sales, and customer
+          service, has honed my adaptability and communication skills. As a
+          developer, I now channel this unique skill set to design intuitive,
+          user-focused products that enhance both user satisfaction and business
+          growth.
         </p>
       </StyledSection>
 
