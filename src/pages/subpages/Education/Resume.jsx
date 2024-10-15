@@ -505,7 +505,7 @@ const ToggleSlider = styled.span`
     width: 59px;
     left: 2px;
     bottom: 2px;
-    background-color: white;
+    background-color: var(--background-color);
     transition: 0.4s;
     border-radius: 13px;
   }
