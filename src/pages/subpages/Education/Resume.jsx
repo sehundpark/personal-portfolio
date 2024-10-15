@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -34,26 +35,8 @@ const skillsData = [
   },
   {
     category: "Tools & Platforms",
-    skills: [
-      "Git",
-      "GitHub",
-      "VS Code",
-      "Webpack",
-      "npm",
-      // "Adobe Lightroom",
-      // "Adobe Photoshop",
-    ],
+    skills: ["Git", "GitHub", "VS Code", "Webpack", "npm"],
   },
-  // {
-  //   category: "Soft Skills",
-  //   skills: [
-  //     "Problem Solving",
-  //     "Creativity",
-  //     "Communication",
-  //     "Adaptability",
-  //     "Interpersonal Skills",
-  //   ],
-  // },
 ];
 
 const featuredProjects = [
@@ -148,123 +131,162 @@ const coursesData = [
   },
 ];
 
-export const Resume = () => (
-  <ResumeContainer>
-    <Header>
-      <Name>Sehun Park</Name>
-      <ContactInfo>
-        {contactInfo.map((item, index) => (
-          <ContactItem key={index}>
-            {item.link ? (
-              <SocialLink
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.icon}
-              </SocialLink>
-            ) : (
-              <>
-                <Icon>{item.icon}</Icon>
-                {item.text}
-              </>
-            )}
-          </ContactItem>
-        ))}
-      </ContactInfo>
-    </Header>
+export const Resume = () => {
+  const [isDetailedView, setIsDetailedView] = useState(false);
 
-    <Section title="Professional Summary">
-      <Summary>
-        Self-taught Front-End Developer with a passion for combining technology
-        and creativity to create impactful, user-focused solutions. Diverse
-        professional background spanning creative industries (acting, cooking,
-        photography) and business roles (marketing, sales, customer service),
-        providing a unique perspective and strong communication skills.
-      </Summary>
-    </Section>
+  return (
+    <ResumeContainer>
+      <Header>
+        <Name>Sehun Park</Name>
+        <ContactInfo>
+          {contactInfo.map((item, index) => (
+            <ContactItem key={index}>
+              {item.link ? (
+                <SocialLink
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.icon}
+                </SocialLink>
+              ) : (
+                <>
+                  <Icon>{item.icon}</Icon>
+                  {item.text}
+                </>
+              )}
+            </ContactItem>
+          ))}
+        </ContactInfo>
+      </Header>
 
-    <Section title="Skills">
-      <SkillsGrid>
-        {skillsData.map((skillCategory, index) => (
-          <SkillCategory key={index}>
-            <SkillTitle>{skillCategory.category}</SkillTitle>
-            <SkillList>
-              {skillCategory.skills.map((skill, skillIndex) => (
-                <Skill key={skillIndex}>{skill}</Skill>
-              ))}
-            </SkillList>
-          </SkillCategory>
-        ))}
-      </SkillsGrid>
-    </Section>
+      <Section title="Professional Summary">
+        <Summary>
+          Self-taught Front-End Developer with a passion for combining
+          technology and creativity to create impactful, user-focused solutions.
+          Diverse professional background spanning creative industries (acting,
+          cooking, photography) and business roles (marketing, sales, customer
+          service), providing a unique perspective and strong communication
+          skills.
+        </Summary>
+      </Section>
 
-    <Section title="Featured Projects">
-      <ProjectGrid>
-        {featuredProjects.map((project, index) => (
-          <ProjectItem key={index}>
-            <ProjectTitle>{project.title}</ProjectTitle>
-            <ProjectDescription>{project.description}</ProjectDescription>
-            <ProjectLinks>
-              <ProjectLink
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </ProjectLink>
-              <ProjectLink
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Demo
-              </ProjectLink>
-            </ProjectLinks>
-          </ProjectItem>
-        ))}
-      </ProjectGrid>
-      <ViewMoreLink to="/works">View all projects</ViewMoreLink>
-    </Section>
+      <Section title="Skills">
+        <SkillsGrid>
+          {skillsData.map((skillCategory, index) => (
+            <SkillCategory key={index}>
+              <SkillTitle>{skillCategory.category}</SkillTitle>
+              <SkillList>
+                {skillCategory.skills.map((skill, skillIndex) => (
+                  <Skill key={skillIndex}>{skill}</Skill>
+                ))}
+              </SkillList>
+            </SkillCategory>
+          ))}
+        </SkillsGrid>
+      </Section>
 
-    <Section title="Education">
-      <ul>
-        {educationData.map((edu, index) => (
-          <EducationItem key={index}>
-            <Degree>{edu.type}</Degree>
-            <ul>
-              {edu.details.map((detail, detailIndex) => (
-                <EducationDetail key={detailIndex}>{detail}</EducationDetail>
-              ))}
-            </ul>
-          </EducationItem>
-        ))}
-      </ul>
-    </Section>
+      <Section title="Featured Projects">
+        <ProjectGrid>
+          {featuredProjects.map((project, index) => (
+            <ProjectItem key={index}>
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <ProjectDescription>{project.description}</ProjectDescription>
+              <ProjectLinks>
+                <ProjectLink
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </ProjectLink>
+                <ProjectLink
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demo
+                </ProjectLink>
+              </ProjectLinks>
+            </ProjectItem>
+          ))}
+        </ProjectGrid>
+        <ViewMoreLink to="/works">View all projects</ViewMoreLink>
+      </Section>
 
-    <Section title="Relevant Coursework">
-      {coursesData.map((courseType, index) => (
-        <CourseCategory key={index}>
-          <CourseTitle>{courseType.type}</CourseTitle>
-          <CourseList>
-            {courseType.courses.map((course, courseIndex) => (
-              <CourseItem key={courseIndex}>
-                <CourseName>{course.name}</CourseName>
-                <CourseDescription>{course.description}</CourseDescription>
-              </CourseItem>
-            ))}
-          </CourseList>
-        </CourseCategory>
-      ))}
-    </Section>
-  </ResumeContainer>
-);
+      <Section title="Education">
+        <ul>
+          {educationData.map((edu, index) => (
+            <EducationItem key={index}>
+              <Degree>{edu.type}</Degree>
+              <ul>
+                {edu.details.map((detail, detailIndex) => (
+                  <EducationDetail key={detailIndex}>{detail}</EducationDetail>
+                ))}
+              </ul>
+            </EducationItem>
+          ))}
+        </ul>
+      </Section>
+
+      <Section title="Relevant Coursework">
+        <CoursesContainer>
+          {coursesData.map((courseType, index) => (
+            <CourseCategory key={index}>
+              <CourseTitleRow>
+                <CourseTitle>{courseType.type}</CourseTitle>
+                {index === 0 && (
+                  <ViewToggle>
+                    <ToggleLabel>
+                      <ToggleInput
+                        type="checkbox"
+                        checked={isDetailedView}
+                        onChange={() => setIsDetailedView(!isDetailedView)}
+                      />
+                      <ToggleSlider />
+                      <ToggleOption $left>Simple</ToggleOption>
+                      <ToggleOption $right>Detailed</ToggleOption>
+                    </ToggleLabel>
+                  </ViewToggle>
+                )}
+              </CourseTitleRow>
+              {isDetailedView ? (
+                <DetailedCoursesView courses={courseType.courses} />
+              ) : (
+                <SimpleCoursesView courses={courseType.courses} />
+              )}
+            </CourseCategory>
+          ))}
+        </CoursesContainer>
+      </Section>
+    </ResumeContainer>
+  );
+};
 
 const Section = ({ title, children }) => (
   <SectionWrapper>
     <SectionTitle>{title}</SectionTitle>
     {children}
   </SectionWrapper>
+);
+
+const SimpleCoursesView = ({ courses }) => (
+  <SimpleList>
+    {courses.map((course, courseIndex) => (
+      <SimpleListItem key={courseIndex}>{course.name}</SimpleListItem>
+    ))}
+  </SimpleList>
+);
+
+const DetailedCoursesView = ({ courses }) => (
+  <CourseList>
+    {courses.map((course, courseIndex) => (
+      <CourseItem key={courseIndex}>
+        <CourseName>{course.name}</CourseName>
+        <CourseDescription>{course.description}</CourseDescription>
+      </CourseItem>
+    ))}
+  </CourseList>
 );
 
 const ResumeContainer = styled.div`
@@ -418,14 +440,99 @@ const EducationDetail = styled.li`
   font-size: 0.9rem;
 `;
 
+const CoursesContainer = styled.div`
+  position: relative;
+`;
+
 const CourseCategory = styled.div`
   margin-bottom: 1.5rem;
 `;
 
+const CourseTitleRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+`;
+
 const CourseTitle = styled.h3`
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
   color: var(--primary-color);
+  margin: 0;
+`;
+
+const ViewToggle = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const ToggleLabel = styled.label`
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+`;
+
+const ToggleInput = styled.input`
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + span {
+    background-color: var(--primary-color);
+  }
+
+  &:checked + span:before {
+    transform: translateX(57px);
+  }
+`;
+
+const ToggleSlider = styled.span`
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transition: 0.4s;
+  border-radius: 15px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 59px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 13px;
+  }
+`;
+
+const ToggleOption = styled.span`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  ${(props) => (props.$left ? "left: 10px;" : "right: 10px;")}
+  color: ${(props) => (props.$left ? "#3498db" : "white")};
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.4s;
+
+  ${ToggleInput}:checked ~ & {
+    color: ${(props) => (props.$left ? "white" : "#3498db")};
+  }
+`;
+
+const SimpleList = styled.ul`
+  padding-left: 20px;
+`;
+
+const SimpleListItem = styled.li`
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 `;
 
 const CourseList = styled.ul`
