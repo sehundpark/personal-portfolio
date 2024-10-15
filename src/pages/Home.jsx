@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import profileAvatar from "../assets/profile-avatar.png";
+import profileAvatar from "../assets/profile-avatar.jpg";
 import { AnimatedIntro } from "../components/AnimatedIntro";
 import { ProjectShowcase } from "../components/Projects/ProjectShowcase";
 import { SkillsSection } from "../components/SkillsSection";
