@@ -44,21 +44,21 @@ const featuredProjects = [
   {
     title: "Battleship",
     description:
-      "A web-based implementation of the classic naval combat strategy game, featuring interactive ship placement and an intelligent computer opponent.",
+      "Battleship is an interactive web project using JavaScript, HTML, and CSS. It employs object-oriented programming for game logic, features dynamic DOM manipulation, drag-and-drop ship placement, and AI targeting. The responsive UI uses flexbox and CSS Grid, with event-driven controls for game actions.",
     demo: "https://sehundpark.github.io/battleship/",
     link: "https://github.com/sehundpark/battleship",
   },
   {
     title: "Shopping Cart",
     description:
-      "A React-based shopping cart application allowing users to browse products, add them to a cart, and manage their shopping experience.",
+      "A React app with dynamic cart management using hooks and localStorage for persistence. Features responsive design with styled-components, seamless navigation via react-router-dom, and efficient cart updates. Deployed on Netlify for fast performance.",
     demo: "https://sehunshoppingcart.netlify.app/",
     link: "https://github.com/sehundpark/shopping-cart",
   },
   {
     title: "Task Planner",
     description:
-      "A comprehensive task management application built with JavaScript, enabling users to organize tasks into categories and projects.",
+      "Task Planner is a web-based task management app built with vanilla JavaScript, HTML5, and CSS3. It features a hierarchical organization system, dynamic UI updates, and local storage integration. This project showcases proficiency in DOM manipulation, state management, and the ability to create complex web applications without frameworks.",
     demo: "https://sehundpark.github.io/todo-list/",
     link: "https://github.com/sehundpark/todo-list",
   },
@@ -388,6 +388,8 @@ const ProjectGrid = styled.div`
 `;
 
 const ProjectItem = styled.div`
+  display: flex;
+  flex-direction: column;
   background-color: var(--card-background);
   padding: 1rem;
   border-radius: 8px;
@@ -408,6 +410,7 @@ const ProjectDescription = styled.p`
 const ProjectLinks = styled.div`
   display: flex;
   gap: 0.5rem;
+  margin-top: auto;
 `;
 
 const ProjectLink = styled.a`

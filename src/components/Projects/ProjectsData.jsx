@@ -10,7 +10,7 @@ export const projectsData = [
     image: BattleShipGIF,
     title: "Battleship",
     description:
-      "Battleship game built with JavaScript featuring interactive ship placement, turn-based gameplay, and a real-time game log against a CPU.",
+      "Battleship is an interactive web project using JavaScript, HTML, and CSS. It employs object-oriented programming for game logic, features dynamic DOM manipulation, drag-and-drop ship placement, and AI targeting. The responsive UI uses flexbox and CSS Grid, with event-driven controls for game actions.",
     link: "https://github.com/sehundpark/battleship",
     demo: "https://sehundpark.github.io/battleship/",
   },
@@ -18,7 +18,7 @@ export const projectsData = [
     image: ShoppingCartGIF,
     title: "Shopping Cart",
     description:
-      "React-based shopping cart app where users can browse products, add items to the cart, and manage their shopping.",
+      "A React app with dynamic cart management using hooks and localStorage for persistence. Features responsive design with styled-components, seamless navigation via react-router-dom, and efficient cart updates. Deployed on Netlify for fast performance.",
     link: "https://github.com/sehundpark/shopping-cart",
     demo: "https://sehunshoppingcart.netlify.app/",
   },
@@ -26,7 +26,7 @@ export const projectsData = [
     image: TaskPlannerGIF,
     title: "Task Planner",
     description:
-      "Comprehensive task management application built with JavaScript, allowing users to organize tasks into categories and projects.",
+      "Task Planner is a web-based task management app built with vanilla JavaScript, HTML5, and CSS3. It features a hierarchical organization system, dynamic UI updates, and local storage integration. This project showcases proficiency in DOM manipulation, state management, and the ability to create complex web applications without frameworks.",
     link: "https://github.com/sehundpark/todo-list",
     demo: "https://sehundpark.github.io/todo-list/",
   },
@@ -34,7 +34,7 @@ export const projectsData = [
     image: PokemonMemoryCardGIF,
     title: "Pokemon Memory Game",
     description:
-      "This project is a fun and interactive memory game featuring Pokemon characters. Players click on Pokemon cards to earn points, but must remember which ones they've clicked to avoid repeating and losing the game.",
+      "Pokemon Memory Game is a React app testing players' memory with Pokemon characters. It features API integration and dynamic UI updates. This project showcases skills in React development, asynchronous JavaScript, and creating interactive user experiences.",
     link: "https://github.com/sehundpark/pokemon-memory-game",
     demo: "https://pokemon-memory-game-sehundpark.netlify.app/",
   },
@@ -42,7 +42,7 @@ export const projectsData = [
     image: EtchASketchGIF,
     title: "Etch-A-Sketch",
     description:
-      "An interactive web-based Etch-A-Sketch application that allows users to create colorful pixel art by hovering over a grid. This project is built using HTML, CSS, and JavaScript.",
+      "Etch-A-Sketch is a web-based drawing app using HTML, CSS, and JavaScript. It features a customizable grid for creating colorful designs. The project showcases DOM manipulation, event handling, and responsive design in front-end development.",
     link: "https://github.com/sehundpark/etch-a-sketch",
     demo: "https://sehundpark.github.io/etch-a-sketch/",
   },

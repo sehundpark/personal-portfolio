@@ -45,7 +45,7 @@ const StyledCard = styled.div`
   padding: 16px;
   width: 100%;
   max-width: 550px;
-  aspect-ratio: ${(props) => (props.$isHomepage ? "auto" : "7 / 8")};
+  aspect-ratio: ${(props) => (props.$isHomepage ? "auto" : "7 / 9")};
   height: ${(props) => (props.$isHomepage ? "600px" : "auto")};
   display: flex;
   flex-direction: column;
@@ -81,6 +81,7 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   border-radius: 8px;
   margin-top: 15px;
+  margin-bottom: 10px;
 `;
 
 const StyledButton = styled.button`
@@ -117,6 +118,5 @@ const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: auto;
-  margin-bottom: 15px;
   gap: 15px;
 `;
