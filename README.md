@@ -1,9 +1,7 @@
 # Sehun Park's Portfolio
+This React-based portfolio application showcases my front-end development projects and more through a responsive, single-page interface. Built with React hooks, styled-components, and react-router-dom, it features a dark mode toggle, dynamic content rendering, and custom components like an image slider.
 
 ![personalportfolio](https://github.com/user-attachments/assets/2550caea-6fde-48fe-8111-ee12a06e249e)
-
-
-This project is a React-based personal portfolio website that showcases my skills as a Front-End Developer and highlights some of my recent work.
 
 ## 🌐 Live Demo
 
