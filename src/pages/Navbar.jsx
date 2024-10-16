@@ -1,26 +1,42 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ThemeContext } from "../components/ThemeContext";
 
 export const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <StyledNavbarContainer>
       <StyledNavbar>
-        <NavLinks>
+        <MenuToggle onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </MenuToggle>
+        <NavLinks $isOpen={isMenuOpen}>
           <StyledNavbarLI>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/" onClick={toggleMenu}>
+              Home
+            </StyledLink>
           </StyledNavbarLI>
           <StyledNavbarLI>
-            <StyledLink to="/projects">Projects</StyledLink>
+            <StyledLink to="/projects" onClick={toggleMenu}>
+              Projects
+            </StyledLink>
           </StyledNavbarLI>
           <StyledNavbarLI>
-            <StyledLink to="/snapshots">Snapshots</StyledLink>
+            <StyledLink to="/snapshots" onClick={toggleMenu}>
+              Snapshots
+            </StyledLink>
           </StyledNavbarLI>
           <StyledNavbarLI>
-            <StyledLink to="/resume">Resume</StyledLink>
+            <StyledLink to="/resume" onClick={toggleMenu}>
+              Resume
+            </StyledLink>
           </StyledNavbarLI>
         </NavLinks>
         <ThemeToggle onClick={toggleTheme}>
@@ -33,27 +49,41 @@ export const Navbar = () => {
 
 const StyledNavbarContainer = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--navbar-bg);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 `;
 
 const StyledNavbar = styled.nav`
-  width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const NavLinks = styled.ul`
   display: flex;
   gap: 1rem;
-  padding: 0;
-  margin: 0;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    display: ${(props) => (props.$isOpen ? "flex" : "none")};
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const StyledNavbarLI = styled.li`
@@ -92,6 +122,24 @@ const ThemeToggle = styled.button`
   svg {
     width: 24px;
     height: 24px;
+  }
+`;
+
+const MenuToggle = styled.div`
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  span {
+    height: 2px;
+    width: 25px;
+    background-color: var(--text-color);
+    margin-bottom: 4px;
+    border-radius: 5px;
   }
 `;
 

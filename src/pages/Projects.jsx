@@ -25,12 +25,13 @@ export const Projects = () => {
 const StyledWorks = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   box-sizing: border-box;
 `;
 
-const StyledWorksHeader = styled.h2`
+const StyledWorksHeader = styled.h1`
   text-align: center;
+  color: var(--primary-color);
   margin-bottom: 2rem;
 `;
 

@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  padding-top: 70px;
   min-width: 320px;
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -139,4 +140,22 @@ select {
 ::placeholder {
   color: var(--text-color);
   opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
 }
