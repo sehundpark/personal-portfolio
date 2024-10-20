@@ -216,7 +216,7 @@ export const Resume = () => {
             </ProjectItem>
           ))}
         </ProjectGrid>
-        <ViewMoreLink to="/works">View all projects</ViewMoreLink>
+        <ViewMoreLink to="/projects">View all projects</ViewMoreLink>
       </Section>
 
       <Section title="Education">
