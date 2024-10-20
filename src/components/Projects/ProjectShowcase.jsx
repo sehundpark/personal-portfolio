@@ -22,7 +22,7 @@ export const ProjectShowcase = ({ limit = 3, useHomepageStyle = false }) => {
           />
         ))}
       </ProjectGrid>
-      <ViewMoreLink to="/works">View All Projects</ViewMoreLink>
+      <ViewMoreLink to="/projects">View All Projects</ViewMoreLink>
     </ShowcaseContainer>
   );
 };
