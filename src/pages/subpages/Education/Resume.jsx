@@ -28,15 +28,15 @@ const contactInfo = [
 const skillsData = [
   {
     category: "Programming Languages",
-    skills: ["JavaScript", "HTML", "CSS"],
+    skills: ["JavaScript", "HTML", "CSS", "TypeScript", "Node.js"],
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["React", "styled-components"],
+    skills: ["React", "Express", "styled-components"],
   },
   {
     category: "Tools & Platforms",
-    skills: ["Git", "GitHub", "VS Code", "Webpack", "npm"],
+    skills: ["Git", "GitHub", "VS Code", "Webpack", "npm", "Vite", "REST APIs"],
   },
 ];
 

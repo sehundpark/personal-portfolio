@@ -7,13 +7,15 @@ import { SkillsSection } from "../components/SkillsSection";
 export const Home = () => {
   const skills = [
     "JavaScript",
+    "TypeScript",
     "React",
     "HTML",
     "CSS",
-    "Styled Components",
+    "Node.js",
+    "Express",
     "Git",
-    // "Adobe Lightroom",
-    // "Adobe Photoshop",
+    "Adobe Lightroom",
+    "Adobe Photoshop",
   ];
 
   // const scrollToFooter = () => {
