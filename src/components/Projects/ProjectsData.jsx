@@ -1,3 +1,4 @@
+import RecipeFinderGIF from "../../assets/works/recipefinder.gif";
 import BattleShipGIF from "../../assets/works/battleship.gif";
 import ShoppingCartGIF from "../../assets/works/shoppingcart.gif";
 import TaskPlannerGIF from "../../assets/works/taskplanner.gif";
@@ -6,6 +7,14 @@ import EtchASketchGIF from "../../assets/works/etchsketch.gif";
 // import TicTacToeGIF from "../../assets/works/tictactoe.gif";
 
 export const projectsData = [
+  {
+    image: RecipeFinderGIF,
+    title: "Recipe Finder",
+    description:
+      "A full-stack TypeScript application leveraging React with custom hooks, context for state management, and styled-components for dynamic theming and responsive design. The application is powered by a Node.js/Express backend featuring RESTful API integration with request caching and custom middleware for API optimization.",
+    link: "https://github.com/sehundpark/recipe-finder",
+    demo: "https://sehunrecipefinder.netlify.app/",
+  },
   {
     image: BattleShipGIF,
     title: "Battleship",

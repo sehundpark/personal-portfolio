@@ -49,11 +49,11 @@ const featuredProjects = [
     link: "https://github.com/sehundpark/battleship",
   },
   {
-    title: "Shopping Cart",
+    title: "Recipe Finder",
     description:
-      "A React app with dynamic cart management using hooks and localStorage for persistence. Features responsive design with styled-components, seamless navigation via react-router-dom, and efficient cart updates. Deployed on Netlify for fast performance.",
-    demo: "https://sehunshoppingcart.netlify.app/",
-    link: "https://github.com/sehundpark/shopping-cart",
+      "A full-stack TypeScript application leveraging React with custom hooks, context for state management, and styled-components for dynamic theming and responsive design. The application is powered by a Node.js/Express backend featuring RESTful API integration with request caching and custom middleware for API optimization.",
+    demo: "https://sehunrecipefinder.netlify.app/",
+    link: "https://github.com/sehundpark/recipe-finder",
   },
   {
     title: "Task Planner",
