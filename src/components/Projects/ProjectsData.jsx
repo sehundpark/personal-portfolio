@@ -24,20 +24,20 @@ export const projectsData = [
     demo: "https://sehundpark.github.io/battleship/",
   },
   {
-    image: ShoppingCartGIF,
-    title: "Shopping Cart",
-    description:
-      "A React app with dynamic cart management using hooks and localStorage for persistence. Features responsive design with styled-components, seamless navigation via react-router-dom, and efficient cart updates. Deployed on Netlify for fast performance.",
-    link: "https://github.com/sehundpark/shopping-cart",
-    demo: "https://sehunshoppingcart.netlify.app/",
-  },
-  {
     image: TaskPlannerGIF,
     title: "Task Planner",
     description:
       "Task Planner is a web-based task management app built with vanilla JavaScript, HTML5, and CSS3. It features a hierarchical organization system, dynamic UI updates, and local storage integration. This project showcases proficiency in DOM manipulation, state management, and the ability to create complex web applications without frameworks.",
     link: "https://github.com/sehundpark/todo-list",
     demo: "https://sehundpark.github.io/todo-list/",
+  },
+  {
+    image: ShoppingCartGIF,
+    title: "Shopping Cart",
+    description:
+      "A React app with dynamic cart management using hooks and localStorage for persistence. Features responsive design with styled-components, seamless navigation via react-router-dom, and efficient cart updates. Deployed on Netlify for fast performance.",
+    link: "https://github.com/sehundpark/shopping-cart",
+    demo: "https://sehunshoppingcart.netlify.app/",
   },
   {
     image: PokemonMemoryCardGIF,
