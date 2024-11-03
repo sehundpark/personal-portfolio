@@ -10,7 +10,7 @@ export const HobbiesActing = () => {
       <StyledActingParagraph>
         Acting is a form of escape into a world that is anything other than this
         current one. It allows for self-expression and the ability to view
-        worlds through different eyes. I began acting in my sophmore year of
+        worlds through different eyes. I began acting in my sophomore year of
         high school with the Southwest Academy of Visual and Performing Arts and
         continued through to the end of college.
       </StyledActingParagraph>
