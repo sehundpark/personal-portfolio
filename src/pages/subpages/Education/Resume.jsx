@@ -42,18 +42,18 @@ const skillsData = [
 
 const featuredProjects = [
   {
-    title: "Battleship",
-    description:
-      "Battleship is an interactive web project using JavaScript, HTML, and CSS. It employs object-oriented programming for game logic, features dynamic DOM manipulation, drag-and-drop ship placement, and AI targeting. The responsive UI uses flexbox and CSS Grid, with event-driven controls for game actions.",
-    demo: "https://sehundpark.github.io/battleship/",
-    link: "https://github.com/sehundpark/battleship",
-  },
-  {
     title: "Recipe Finder",
     description:
       "A full-stack TypeScript application leveraging React with custom hooks, context for state management, and styled-components for dynamic theming and responsive design. The application is powered by a Node.js/Express backend featuring RESTful API integration with request caching and custom middleware for API optimization.",
     demo: "https://sehunrecipefinder.netlify.app/",
     link: "https://github.com/sehundpark/recipe-finder",
+  },
+  {
+    title: "Battleship",
+    description:
+      "Battleship is an interactive web project using JavaScript, HTML, and CSS. It employs object-oriented programming for game logic, features dynamic DOM manipulation, drag-and-drop ship placement, and AI targeting. The responsive UI uses flexbox and CSS Grid, with event-driven controls for game actions.",
+    demo: "https://sehundpark.github.io/battleship/",
+    link: "https://github.com/sehundpark/battleship",
   },
   {
     title: "Task Planner",
