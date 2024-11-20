@@ -5,9 +5,9 @@ export const ResumePage = () => {
   return (
     <StyledResumePage>
       <PageHeader>Resume</PageHeader>
-      <ResumeWrapper>
-        <Resume />
-      </ResumeWrapper>
+      {/* <ResumeWrapper> */}
+      <Resume />
+      {/* </ResumeWrapper> */}
     </StyledResumePage>
   );
 };
@@ -25,9 +25,9 @@ const PageHeader = styled.h1`
   margin-bottom: 2rem;
 `;
 
-const ResumeWrapper = styled.div`
-  background-color: var(--card-background);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`;
+// const ResumeWrapper = styled.div`
+//   background-color: var(--card-background);
+//   padding: 2rem;
+//   border-radius: 12px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+// `;
