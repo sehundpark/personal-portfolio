@@ -39,10 +39,10 @@ export const Home = () => {
       <StyledSection>
         <h2>About Me</h2>
         <p>
-          I’m a self-taught Front-End Developer driven by a passion for blending
-          technology and creativity to craft impactful user experiences. My
-          diverse background in creative fields like acting, cooking, and
-          photography, along with roles in marketing, sales, and customer
+          I’m a Full-Stack Web Developer Software Engineer with a focus in Front
+          End work driven by a passion for blending technology and creativity to
+          craft impactful user experiences. My diverse background in creative
+          fields along with business roles in marketing, sales, and customer
           service, has honed my adaptability and communication skills. As a
           developer, I now channel this unique skill set to design intuitive,
           user-focused products that enhance both user satisfaction and business

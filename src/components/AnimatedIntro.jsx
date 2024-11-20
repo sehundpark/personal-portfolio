@@ -36,7 +36,7 @@ export const AnimatedIntro = () => {
 
     const typed2 = new Typed(el2.current, {
       ...options,
-      strings: ["I'm a self-taught Front-End Developer."],
+      strings: ["I'm a Full-Stack Web Developer."],
       onComplete: (self) => {
         removeCursor(self);
         setShowIcons(true);
