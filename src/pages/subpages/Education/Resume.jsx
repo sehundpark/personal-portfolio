@@ -2,33 +2,26 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 export const Resume = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
+    // Check if the device is running iOS
+    setIsIOS(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream);
   }, []);
 
   return (
     <ResumeContainer>
-      {/* <Controls $isMobile={isMobile}>
-        <DownloadButton href="/Sehun_Park_Resume.pdf" download>
-          Download PDF
-        </DownloadButton>
-        <ViewButton
-          href="/Sehun_Park_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View in New Tab
-        </ViewButton>
-      </Controls> */}
+      {isIOS && (
+        <IOSControls>
+          <ViewButton
+            href="/Sehun_Park_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open in Safari
+          </ViewButton>
+        </IOSControls>
+      )}
       <PDFWrapper>
         <PDFViewer
           src="/Sehun_Park_Resume.pdf#view=FitH"
@@ -48,42 +41,32 @@ const ResumeContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 850px; // Standard resume width
+  max-width: 850px;
 `;
 
-const Controls = styled.div`
+const IOSControls = styled.div`
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  justify-content: center;
+  padding: 0.75rem;
   background: var(--card-background);
   border-bottom: 1px solid var(--border-color);
-  justify-content: center;
-
-  ${(props) =>
-    props.$isMobile &&
-    `
-    padding: 0.75rem;
-    gap: 0.5rem;
-  `}
 `;
 
-const Button = styled.a`
+const ViewButton = styled.a`
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s, transform 0.2s;
   text-align: center;
-  min-width: 120px;
-
-  @media (max-width: 768px) {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-    min-width: 100px;
-  }
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.9rem;
 
   &:hover {
+    background-color: var(--secondary-color);
+    color: white;
     transform: translateY(-1px);
   }
 
@@ -92,33 +75,12 @@ const Button = styled.a`
   }
 `;
 
-const DownloadButton = styled(Button)`
-  background-color: var(--primary-color);
-  color: white;
-
-  &:hover {
-    background-color: var(--secondary-color);
-    color: white;
-  }
-`;
-
-const ViewButton = styled(Button)`
-  background-color: var(--card-background);
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-
-  &:hover {
-    background-color: var(--primary-color);
-    color: white;
-  }
-`;
-
 const PDFWrapper = styled.div`
   width: 100%;
-  aspect-ratio: 8.5 / 11; // Standard US Letter size ratio
+  aspect-ratio: 8.5 / 11;
 
   @media (max-width: 768px) {
-    aspect-ratio: 0.77; // Slightly adjusted for mobile
+    aspect-ratio: 0.77;
   }
 `;
 
